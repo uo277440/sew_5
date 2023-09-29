@@ -29,7 +29,12 @@
 		 <a tabindex="7" href="noticias.html">Noticias</a>
 	</nav>
 	<h1>Información personal</h1>
-	<img src='multimedia/yo.jpg' alt="2" />
+	<picture>
+		<source media="(max-width: 465px)" srcset="multimedia/c_lenguaje">
+  		<source media="(max-width:799px)" srcset="multimedia/java_lenguaje">
+		<source media="(min-width:800px)" srcset="multimedia/swift_lenguaje">
+		<img src='multimedia/yo.jpg' alt="2" />
+	</picture>
 	<p>Nombre: Lucas</p>
 	<p>Apellidos: Martínez Rego</p>
 	<p>UO: 277440</p>
