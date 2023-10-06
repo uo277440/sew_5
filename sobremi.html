@@ -9,6 +9,7 @@
 	de las palabras clave del mismo separadas por comas" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+	<link rel="icon" href="multimedia/favicon.ico">
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <title>Escritorio Virtual</title>
@@ -17,8 +18,8 @@
 
 <body>
     <!-- Datos con el contenidos que aparece en el navegador -->
-    <h1>Sobre mi</h1>
-    <p>En desarrollo</p>
+	<header>
+    <h1>Escritorio Virtual</h1>
 	<nav>
 		 <a tabindex="1" accesskey="I" href="index.html">Home</a>
 		 <a tabindex="2" href="sobremi.html">Current Events</a>
@@ -28,117 +29,130 @@
 		 <a tabindex="6" href="metereologia.html">Metereología</a>
 		 <a tabindex="7" href="noticias.html">Noticias</a>
 	</nav>
-	<h1>Información personal</h1>
-	<picture>
-		<source media="(max-width: 465px)" srcset="multimedia/c_lenguaje">
-  		<source media="(max-width:799px)" srcset="multimedia/java_lenguaje">
-		<source media="(min-width:800px)" srcset="multimedia/swift_lenguaje">
-		<img src='multimedia/yo.jpg' alt="2" />
-	</picture>
-	<p>Nombre: Lucas</p>
-	<p>Apellidos: Martínez Rego</p>
-	<p>UO: 277440</p>
-	<p>Correo electrónico: uo277440@uniovi.es</p>
-	<p>Dirección: Camín de la Piñera 26</p>
-	<h1>Listas</h1>
-	<h2>Aficciones</h2>
-	<p>Esta lista no está ordenada</p>
-	<ul>
-		<li>Música</li>
-		<li>Jugar videojuegos</li>
-		<li>Ir al cine</li>
-		<li>Jugar al padel</li>
-		<li>Escalada</li>
-	</ul>
-	<h2>Canyantes/Grupos favoritos <audio>href=mu</audio></h2>
-	<p>Está lista estará ordenada</p>
-	<audio src="Multimedia/musica.mp3" controls></audio>
-	<ol>
-		<li>Quevedo</li>
-		<li>Mora</li>
-		<li>Bzrp</li>
-		<li>Feid</li>
-		<li>Karol G</li>
-	</ol>
-	<h3>Asignaturas favoritas</h3>
-	<p>5 asignaturas que más me han gustado hasta el momento</p>
-	<dl>
-		<dt>Cálculo</dt>
-		<dd>Asignatura de formación básica que trata temas muy interesantes</dd>
-		<dt>Diseño de Lenguajes de Programación</dt>
-		<dd>Profundiza en el diseño de lenguajes, muy interesante</dd>
-		<dt>Diseño del Software</dt>
-		<dd>Asignatura muy útil con patrones interesantes</dd>
-		<dt>Repositorios de Información</dt>
-		<dd>Manejo de bases de datos e implicación en proyectos</dd>
-		<dt>Álgebra</dt>
-		<dd>Fundamentos del álgebra interesantes</dd>
-	</dl>
-	<h4>Aficciones desarrolladas</h4>
-	<p>Aficciones específicas mediante listas anidadas</p>
-	<ul>
-        <li>Deportes
-            <ul>
-                <li>Pádel</li>
-                <li>Surf</li>
-                <li>Fútbol</li>
-            </ul>
-        </li>
-        <li>Videojuegos
-            <ul>
-                <li>Fortnite </li>
-				<li> <a href="https://www.fortnite.com/?lang=es-ES">Página Fortnite</a> </li>
-                <li>SlappyBall</li>
-				<li> <a href="https://www.slappyball.com/">Página SlapyBall</a> </li>
-                <li>Csgo</li>
-				<li> <a  href="https://blog.counter-strike.net/es/">Página Csgo</a> </li>
-            </ul>
-        </li>
-		<li>Lenguajes de Programación
-            <ul>
-                <li>C <img src='multimedia/c_lenguaje.jpg' alt="3" /></li>
-                <li>Java <img src='multimedia/java_lenguaje.png' alt="4"/></li>
-                <li>Swift <img src='multimedia/swift_lenguaje.jpg' alt="5"/></li>
-            </ul>
-        </li>
-    </ul>
-	<p>Unos videos para demostrar mi aficción a los videojuegos</p>
+	</header>
+	<section>
+		<h2>Información personal</h2>
+		<picture>
+			<source media="(max-width: 465px)" srcset="multimedia/yo.jpg">
+			<source media="(max-width:799px)" srcset="multimedia/yo_2.jpg">
+			<source media="(min-width:800px)" srcset="multimedia/yo_3.jpg">
+			<img src='multimedia/yo.jpg' alt="No me puedo mostrar" />
+		</picture>
+		<p>Nombre: Lucas</p>
+		<p>Apellidos: Martínez Rego</p>
+		<p>UO: 277440</p>
+		<p>Correo electrónico: uo277440@uniovi.es</p>
+		<p>Dirección: Camín de la Piñera 26</p>
+	</section>
+
+	<section>
+		<h2>Aficciones</h2>
+		<p>A continuación una lista no ordenada con mis afciciones principales</p>
+		<audio src="Multimedia/zelda.wav" controls></audio>
+		<ul>
+			<li>Música</li>
+			<li>Jugar videojuegos</li>
+			<li>Ir al cine</li>
+			<li>Jugar al padel</li>
+			<li>Escalada</li>
+		</ul>
+		<h2>Canyantes/Grupos favoritos <audio>href=mu</audio></h2>
+		<p>Está lista estará ordenada</p>
+		<audio src="Multimedia/musica.mp3" controls></audio>
+		<ol>
+			<li>Quevedo</li>
+			<li>Mora</li>
+			<li>Bzrp</li>
+			<li>Feid</li>
+			<li>Karol G</li>
+		</ol>
+		<p>Unos videos para demostrar mi aficción a los videojuegos</p>
 		<video width="320" height="240" controls>
+			<source src="multimedia/fortnite.webm" type="video/webm">
 			<source src="multimedia/fortnite.mp4" type="video/mp4">
 		</video>
 		<video width="320" height="240" controls>
 			<source src="multimedia/csgo.mp4" type="video/mp4">
 		</video>
-	<table>
-		<caption> Temperaturas medias últimos 10 años en Gijón</caption>
-		<tr>
-		  <td> Años/Temperatura media </td>
-			<th> 2014 </th>
-			<th> 2015 </th>
-			<th> 2016 </th>
-			<th> 2017 </th>
-			<th> 2018 </th>
-			<th> 2019 </th>
-			<th> 2020 </th>
-			<th> 2021 </th>
-			<th> 2022 </th>
-			<th> 2023 </th>
-		</tr>
-		<tr>
-			<th>Temperaturas</th>
-			<td>16.0°C </td>
-			<td>15.4°C</td>
-			<td>15.7°C</td>
-			<td>16.2°C</td>
-			<td>16.0°C </td>
-			<td>14.9°C</td>
-			<td>14.8°C</td>
-			<td>15.2°C</td>
-			<td>15.2°C </td>
-			<td>15.4°C</td>
-		</tr>
-	</table>
+	</section>
+	<section>
+		<h2>Asignaturas favoritas</h2>
+		<p>5 asignaturas que más me han gustado hasta el momento</p>
+		<dl>
+			<dt>Cálculo</dt>
+			<dd>Asignatura de formación básica que trata temas muy interesantes</dd>
+			<dt>Diseño de Lenguajes de Programación</dt>
+			<dd>Profundiza en el diseño de lenguajes, muy interesante</dd>
+			<dt>Diseño del Software</dt>
+			<dd>Asignatura muy útil con patrones interesantes</dd>
+			<dt>Repositorios de Información</dt>
+			<dd>Manejo de bases de datos e implicación en proyectos</dd>
+			<dt>Álgebra</dt>
+			<dd>Fundamentos del álgebra interesantes</dd>
+		</dl>
+	</section>
+	<section>
+		<h2>Aficciones desarrolladas</h2>
+		<p>Aficciones desarrolladas</p>
+		<ul>
+			<li>Deportes
+				<ul>
+					<li>Pádel</li>
+					<li>Surf</li>
+					<li>Fútbol</li>
+				</ul>
+			</li>
+			<li>Videojuegos
+				<ul>
+					<li>Fortnite </li>
+					<li> <a href="https://www.fortnite.com/?lang=es-ES">Página Fortnite</a> </li>
+					<li>SlappyBall</li>
+					<li> <a href="https://www.slappyball.com/">Página SlapyBall</a> </li>
+					<li>Csgo</li>
+					<li> <a  href="https://blog.counter-strike.net/es/">Página Csgo</a> </li>
+				</ul>
+			</li>
+			<li>Lenguajes de Programación
+				<ul>
+					<li>C <img src='multimedia/c_lenguaje.jpg' alt="3" /></li>
+					<li>Java <img src='multimedia/java_lenguaje.png' alt="4"/></li>
+					<li>Swift <img src='multimedia/swift_lenguaje.jpg' alt="5"/></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+			
 	
-	
+	<aside>
+		<table id="temperaturas">
+			<caption> Temperaturas medias últimos 10 años en Gijón</caption>
+			<tr>
+		  	<th scope="col" id="años"> Años</th>
+				<th scope="col" id="2014"> 2014 </th>
+				<th scope="col" id="2015"> 2015 </th>
+				<th scope="col" id="2016"> 2016 </th>
+				<th scope="col" id="2017"> 2017 </th>
+				<th scope="col" id="2018"> 2018 </th>
+				<th scope="col" id="2019"> 2019 </th>
+				<th scope="col" id="2020"> 2020 </th>
+				<th scope="col" id="2021"> 2021 </th>
+				<th scope="col" id="2022"> 2022 </th>
+				<th scope="col" id="2023"> 2023 </th>
+			</tr>
+			<tr>
+				<th scope="row" id="temperatura" headers="años">Temperaturas</th>
+				<td headers="temperatura 2014">16.0°C </td>
+				<td headers="temperatura 2015">15.4°C</td>
+				<td headers="temperatura 2016">15.7°C</td>
+				<td headers="temperatura 2017">16.2°C</td>
+				<td headers="temperatura 2018">16.0°C </td>
+				<td headers="temperatura 2019">14.9°C</td>
+				<td headers="temperatura 2020">14.8°C</td>
+				<td headers="temperatura 2021">15.2°C</td>
+				<td headers="temperatura 2022">15.2°C </td>
+				<td headers="temperatura 2023">15.4°C</td>
+			</tr>
+		</table>
+	</aside>
 </body> 
 </html>
