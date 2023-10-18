@@ -8,7 +8,12 @@ table th{
     border-color: #000000;
     color:#551212;
   }
-
+  body {
+    background-color:#DED9CD;
+    font-family: 'Segoe UI',Helvetica, Tahoma, Verdana, sans-serif;
+    font-size:medium;
+    color:#0000;
+    }
 table{
     border: 1px solid;
     color:rgb(0, 0, 0);
@@ -18,7 +23,7 @@ table{
 /*Especificidad: 001*/
 h1 {
   border-style:dashed;
-  font-family: 'Segoe UI',Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI',Helvetica, Tahoma,Verdana, sans-serif;
   color: #2c5545;    
   text-transform: uppercase;
   padding: 2em; 
@@ -26,16 +31,14 @@ h1 {
   font-size: x-large;
   }
   h2{
-    font-family: 'Segoe UI',Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI',Helvetica, Tahoma, Verdana, sans-serif;
     font-size: large;
     color: #2c5545;   
   }
   p{
     color: rgb(0, 0, 0); 
   }
-body {
-background-color:#DED9CD;
-}
+
 a{
   color:#000000;
 }
@@ -49,7 +52,7 @@ a:active{
   background-color:#DED9CD;
 }
 ul > li:nth-child(3) ul li {
-  color: orange;
+  color: rgb(17, 3, 66);
 }
 
 li ul{
