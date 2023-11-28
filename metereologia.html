@@ -1,19 +1,25 @@
 <!DOCTYPE HTML>
 
 <html lang="es">
-<head>
-	<meta name ="author" content ="Lucas Martínez Rego" />
-	<meta name ="description" content ="aquí cada documento debe tener la
-	descripción del contenido concreto del mismo" />
-	<meta name ="keywords" content ="aquí cada documento debe tener la lista
-	de las palabras clave del mismo separadas por comas" />
-	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="estilo.css" />
-    <!-- Datos que describen el documento -->
-    <meta charset="UTF-8" />
-    <title>Escritorio Virtual</title>
-	
-</head>
+	<head>
+		<meta name ="author" content ="Lucas Martínez Rego" />
+		<meta name ="description" content ="página sobre mi y mis aficiones" />
+		<meta name ="keywords" content ="afición tiempo álgebra" />
+		<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+		<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+		<link rel="icon" href="multimedia/favicon.ico">
+		<!-- Datos que describen el documento -->
+		<meta charset="UTF-8" />
+		<!-- Referencia al archivo JavaScript -->
+		<script src="js/pais.js"></script>
+		<script
+  		src="https://code.jquery.com/jquery-3.7.1.min.js"
+  		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  		crossorigin="anonymous"></script>
+		<title>Escritorio Virtual</title>
+		
+	</head>
 
 <body>
     <!-- Datos con el contenidos que aparece en el navegador -->
@@ -28,5 +34,20 @@
 		 <a tabindex="6" href="metereologia.html">Metereología</a>
 		 <a tabindex="7" href="noticias.html">Noticias</a>
 	</nav>
+	<section>
+		<h2>Información del país</h2>
+		<script>
+			pais=new Pais("Kenia","Nairobi","53000000");
+			pais.rellenarAtributos("Democracia representativa","1°17 S;36°49 E","Cristianismo");
+			document.write(pais.getNombreCapital());
+			document.write(pais.getPoblacion());
+			document.write(pais.getTipoGobierno());
+			document.write(pais.getReligionMayoritaria());
+			document.write(pais.secundariosHTML());
+			pais.escribirCoordenadas();
+			pais.actualizarPronostico();
+		</script>
+	</section>
 </body>
+
 </html>

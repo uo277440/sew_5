@@ -7,24 +7,28 @@ body {
   }
 /* datos personales Nombre Apellidos y UO*/
 table th{
-    border: 1px solid;
+  /* Hereda background-color de body #DED9CD */
+    border: 0.2em solid;
     color:rgb(0, 0, 0);
+    
   }
   table td{
-    border: 1px solid;
+    /* Hereda background-color de body #DED9CD */
+    border: 0.2em solid;
     border-color: #000000;
     color:#000000;
   }
   
 table{
-    border: 1px solid;
+  /* Hereda background-color de body #DED9CD */
+    border: 0.2em solid;
     color:rgb(0, 0, 0);
     border-collapse: collapse;
 }
 
 /*Especificidad: 001*/
 h1 {
-  
+  /* Hereda background-color de body #DED9CD */
   font-family: 'Segoe UI',Helvetica, Tahoma,Verdana, sans-serif;
   color: #2c5545;    
   text-transform: uppercase;
@@ -32,57 +36,58 @@ h1 {
   text-align: center;     
   font-size: xx-large;
   }
+  /*Especificidad: 001*/
   h2{
+    /* Hereda background-color de body #DED9CD */
     font-family: 'Segoe UI',Helvetica, Tahoma, Verdana, sans-serif;
     font-size: x-large;
     color: #2c5545;   
   }
+  /*Especificidad: 001*/
   p{
+    /* Hereda background-color de body #DED9CD */
     color: rgb(0, 0, 0); 
   }
-
+/*Especificidad: 001*/
 a{
+  /* Hereda background-color de body #DED9CD */
   color:#000000;
 }
+/*Especificidad: 011*/
 a:visited{
+  /* Hereda color de a #000000 */
   background-color:#370a3d;
 }
+/*Especificidad: 011*/
 a:hover{
+  /* Hereda background-color de body #DED9CD */
   color:#551212;
 }
+/*Especificidad: 011*/
 a:active{
+  /* Hereda color de a #000000 */
   background-color:#DED9CD;
 }
+/*Especificidad: 014*/
 ul > li:nth-child(3) ul li {
-  color: rgb(17, 3, 66);
+  /* Hereda background-color de body #DED9CD */
+  color: rgb(28, 66, 3);
 }
-
+/*Especificidad: 002*/
 li ul{
   list-style-image:url(../multimedia/videogame.svg)
 }
+/*Especificidad: 001*/
 ul,
 ol,
 dl,
 p {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
-
+/*Especificidad: 001*/
 li,
 p {
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
-/* Estilos para las listas de descripciones */
 
-dd,
-dt {
-  line-height: 1.5;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-bottom: 1.5rem;
-}

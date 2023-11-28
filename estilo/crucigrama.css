@@ -1,0 +1,47 @@
+section {
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+
+}
+
+p {
+    border: 0.05em solid black;
+    text-align: center;
+    margin: 0;
+}
+p[data-state='empty']{
+    background-color: black;
+}
+p[data-state = "clicked"]{
+    background-color: aquamarine;
+}
+/* Estilos para una mediaquery
+que muestre la botonera en tablet y móvil */
+@media screen and (min-width: 600px){
+    section[data-type=botonera] {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+section[data-type=botonera] {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section[data-type=botonera] h2 {
+    width: 100%;
+    text-align: center;
+}
+
+section[data-type=botonera] button {
+    width: calc(15% - 1em);
+    height: 4em;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+}
+}

@@ -8,25 +8,38 @@
 	<meta name ="keywords" content ="aquí cada documento debe tener la lista
 	de las palabras clave del mismo separadas por comas" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
+	<script src="js/fondo.js"></script>
+	<script
+  	src="https://code.jquery.com/jquery-3.7.1.min.js"
+  	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  	crossorigin="anonymous"></script>
     <title>Escritorio Virtual</title>
 	
 </head>
 
 <body>
-    <!-- Datos con el contenidos que aparece en el navegador -->
-    <h1>Escritorio Virtual</h1>
-    <p>En desarrollo</p>
-	<nav>
-		 <a tabindex="1" accesskey="I" href="index.html">Home</a>
-		 <a tabindex="2" href="sobremi.html">Current Events</a>
-		 <a tabindex="3" href="agenda.html">Agenda</a>
-		 <a tabindex="4" href="juegos.html">Juegos</a>
-		 <a tabindex="5" href="viajes.html">Viajes</a>
-		 <a tabindex="6" href="metereologia.html">Metereología</a>
-		 <a tabindex="7" href="noticias.html">Noticias</a>
-	</nav>
+    <header>
+		<h1>en desarrollo</h1>
+		<nav>
+			<ul>
+			 <a tabindex="1" accesskey="I" href="index.html">Home</a>
+			 <a tabindex="2" href="sobremi.html">Current Events</a>
+			 <a tabindex="3" href="agenda.html">Agenda</a>
+			 <a tabindex="4" href="juegos.html">Juegos</a>
+			 <a tabindex="5" href="viajes.html">Viajes</a>
+			 <a tabindex="6" href="metereologia.html">Metereología</a>
+			 <a tabindex="7" href="noticias.html">Noticias</a>
+			</ul>
+		</nav>
+	</header>
+	
 </body>
+<script>
+	var fondo=new Fondo('Kenia','Nairobi','1°17 S;36°49 E');
+	fondo.datosAPI();
+</script>
 </html>

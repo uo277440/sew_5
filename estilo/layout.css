@@ -1,23 +1,45 @@
+
+
+/*Especificidad: 001*/
 header {
+  
     border-style:inset;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d6d6d6;
-    color: #000000;
-    padding: 10px 20px;
-    
+    flex-wrap: wrap;
+    background-color: rgb(209, 240, 215);
+
   }
+
+/*Especificidad: 002*/  
+nav a {
+  /* Hereda background-color de header #d6d6d6 */
+  color: #000000;
+  padding: 1em;
   
-  nav ul {
-    display: flex;
-  }
+}
   
-  nav li {
-    margin-right: 30px;
-   
-  }
-  
-  nav a {
-    color: #000000;
-  }
+@media (max-width: 768px) {
+  /*Especificidad: 002*/  
+    nav a {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 480px) {
+  /*Especificidad: 001*/  
+    header {
+        flex-direction: column;
+    } 
+
+}
+
+
+
+
+
+
+
+

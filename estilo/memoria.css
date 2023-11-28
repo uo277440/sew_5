@@ -1,0 +1,63 @@
+body > section:first-of-type{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ccc; /* Puedes ajustar el color de fondo según tus preferencias */
+  }
+  
+  article {
+    width: calc(20% - 4em); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
+    height: 30em;
+    margin:3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2em solid #000; 
+    padding-right: 1em;
+    padding-bottom: 6em;
+    transform: scale(1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+  article.flip {
+    transform: rotateY(180deg);
+}
+
+article h3,
+article img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+article h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+article img {
+    transform: rotateY(180deg);
+}
+  
+  img {
+    width: 15em; 
+    height: 15em;
+    
+  }
+  

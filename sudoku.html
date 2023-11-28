@@ -8,13 +8,15 @@
 	<meta name ="keywords" content ="aquí cada documento debe tener la lista
 	de las palabras clave del mismo separadas por comas" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<link rel="stylesheet" type="text/css" href="./estilo/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="./estilo/layout.css" />
+	<link rel="stylesheet" type="text/css" href="./estilo/sudoku.css" />
+	<script src="js/sudoku.js"></script>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <title>Escritorio Virtual</title>
 	
 </head>
-
 <body>
     <!-- Datos con el contenidos que aparece en el navegador -->
     <header>
@@ -30,14 +32,31 @@
 			 <a tabindex="7" href="noticias.html">Noticias</a>
 			</ul>
 		</nav>
-	</header>
-	<h2>Juegos disponibles</h2>
-	<nav>
-        <menu>
-            <li><a href="memoria.html">Juego de memoria</a></li>
-			<li><a href="sudoku.html">Sudoku</a></li>
-			<li><a href="crucigrama.html">Crucigrama</a></li>
-            <!-- Agrega más juegos según sea necesario -->
-        </menu>
+		</header>
+	<main>
+		
+		
+		
+		
+    </main>
+	
 </body>
+<script>
+	var sudoku=new Sudoku();
+    sudoku.paintSudoku()
+	document.addEventListener('keydown', function(event) {
+		var someClicked = document.querySelectorAll('p[data-state = "clicked"]')
+		numero = parseInt(event.key)
+		if(someClicked.length===0){
+			console.log("CELDA NO SELECCIONADA")
+		}else{
+			if(!isNaN(numero) && numero >= 1 && numero <=9){
+			sudoku.introduceNumber(event.key);
+		}
+		}
+		
+        
+    });
+</script>
+
 </html>
