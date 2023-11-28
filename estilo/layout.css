@@ -24,6 +24,7 @@ nav a {
   /*Especificidad: 002*/  
     nav a {
         flex-direction: column;
+        padding: 1em;
     }
 }
 
@@ -32,6 +33,7 @@ nav a {
   /*Especificidad: 001*/  
     header {
         flex-direction: column;
+        padding: 1em;
     } 
 
 }
