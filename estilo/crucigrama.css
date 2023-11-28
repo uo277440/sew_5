@@ -16,6 +16,9 @@ p[data-state='empty']{
 p[data-state = "clicked"]{
     background-color: aquamarine;
 }
+p[data-state = "correct"]{
+    background-color: rgb(231, 238, 235);
+}
 /* Estilos para una mediaquery
 que muestre la botonera en tablet y móvil */
 @media screen and (min-width: 600px){
