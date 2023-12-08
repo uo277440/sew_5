@@ -10,10 +10,11 @@
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+	<link rel="stylesheet" type="text/css" href="estilo/noticias.css" />
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	
+	<script src="js/noticias.js"></script>
     <title>Escritorio Virtual</title>
 	
 </head>
@@ -33,5 +34,21 @@
 			
 		</nav>
 		</header>
+		<script>
+			var noticia = new Noticias()
+		</script>
+		<input type="file" onchange="noticia.readInputFile(this)"/>
+		<section>
+			<h2>Añadir Noticia</h2>
+  			<label for="titular">Titular:</label>
+  			<input type="text" name="titular" />
+  			<label for="entradilla">Entradilla:</label>
+			<input type="text" name="entradilla" />
+			<label for="texto">Texto:</label>
+  			<input type="text" name="texto" />
+  			<label for="autor">Autor:</label>
+			<input type="text" name="autor" />
+			<button onclick="noticia.addNoticia()">Añadir Noticia</button>
+		</section>
 </body>
 </html>

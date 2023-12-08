@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas>
+    <ruta nombre="a" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="descripcion" agencia="agencia" duracion="dura">
+        <tipoRuta>Silvestre</tipoRuta>
+        <medioTransporte>Coche</medioTransporte>
+        <fechaInicio>12/12/12</fechaInicio>
+        <horaInicio>12:00</horaInicio>
+        <personasAdecuadas>No niños</personasAdecuadas>
+        <coordenadasInicio>1;38</coordenadasInicio>
+        <referencias>
+            <referencia>Una referencia</referencia>
+            <referencia>Otra referencia</referencia>
+        </referencias>
+        <hitos>
+            <hito nombre="super hito" descripcion="un hito interesante">
+                <coordenadas>1;38</coordenadas>
+                <distanciaAnterior>4km</distanciaAnterior>
+                <fotoHitos>
+                    <fotoHito>una foto</fotoHito>
+                    <fotoHito>otra foto</fotoHito>
+                </fotoHitos>
+                <videosHito>
+                    <videoHito>Un video</videoHito>
+                    <videoHito>Otro video</videoHito>
+                </videosHito>
+            </hito>
+           
+        </hitos>
+        <recomendacion>6</recomendacion>
+    </ruta>
+</rutas>

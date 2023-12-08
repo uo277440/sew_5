@@ -1,0 +1,36 @@
+section:first-child{
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+section{
+    align-items: center;
+    justify-content: space-around;
+    
+    
+  }
+  article {
+    border: 0.0625em solid #ddd; 
+    border-radius: 0.5em; 
+    margin-bottom: 1.25em;
+    padding: 1.25em; 
+    background-color: #ffffff;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); 
+}
+
+
+article ul {
+    list-style: none;
+    padding: 0;
+}
+
+article li {
+    margin-bottom: 0.625em; 
+}
+
+article h3 {
+    
+    margin-top: 1.25em; 
+}
+
+  

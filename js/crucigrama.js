@@ -1,3 +1,4 @@
+
 class Crucigrama{
     constructor(){
         this.board="4,*,.,=,12,#,#,#,5,#,#,*,#,/,#,#,#,*,4,-"+
@@ -10,13 +11,19 @@ class Crucigrama{
         this.columnas=9
         this.boardArray
         this.init_time
-        this.end_ime
+        this.end_time
+        this.startedTime=false
         this.boardArray=new Array(this.filas)
         for (var i = 0; i < this.boardArray.length; i++) {
             this.boardArray[i] = new Array(this.columnas);
           }
           this.start()
           this.paintMathword()
+          this.nivel="facil"
+          this.server="localhost"
+          this.user="DBUSER2023"
+          this.pass="DBPSWD2023"
+          this.dbname="records"
     }
     start(){
         var pos = 0
@@ -36,7 +43,9 @@ class Crucigrama{
     }
     paintMathword(){
         
-         
+       var section = $("<section data-type='crucigrama'></section>")
+       var h2 = $("<h2>Crucigrama</h2>")
+       section.append(h2)
         for (var i = 0; i < this.filas; i++) {
           for (var j = 0; j < this.columnas; j++) {
             var p = document.createElement('p');
@@ -50,11 +59,12 @@ class Crucigrama{
                 p.setAttribute("data-state","blocked")
               }
             
-            $('main > section:first').append(p);
+            section.append(p);
             
           }
         }
-        this.init_time = new Date();
+        $('main').append(section)
+       // this.init_time = new Date();
     }
     click(){
     var someClicked = document.querySelectorAll('p[data-state = "clicked"]')
@@ -85,7 +95,7 @@ class Crucigrama{
         const seconds = Math.floor((time_difference % 60000) / 1000);
 
         const formatted_time = `${hours}:${minutes}:${seconds}`;
-
+        this.tiempo=seconds+hours*3600+minutes*60
         return formatted_time;
 
     }
@@ -94,20 +104,27 @@ class Crucigrama{
         var expression_row=true
         var expression_col=true
         var someclicked = $("p[data-state='clicked']")[0]
-        var parrafos = Array.from($('p'))
+        var parrafos = Array.from($('section[data-type="crucigrama"] p'))
         var indice=parrafos.indexOf(someclicked)
         var i = parseInt(indice/9);
         var j = (indice)%9;
         this.boardArray[i][j]=numero
         if(this.comprobarHorizontal(i,j) && this.comprobarVertical(i,j)){
+          if(!this.startedTime){
+            this.init_time = new Date();
+            this.startedTime = true
+          }
+          
           someclicked.setAttribute("data-state","correct")
           someclicked.textContent=this.boardArray[i][j]
         }else{
-          this.boardArray[i][j]=numero
+          this.boardArray[i][j]="0"
           someclicked.setAttribute("data-state","default")
+          alert("Incorrecto")
         }
         if(this.check_win_condition()){
           alert("Crucigrama completado en "+this.calculate_date_difference())
+          this.createRecordForm()
         }
     }
   }
@@ -180,4 +197,26 @@ class Crucigrama{
       return false
     }
   }
+  createRecordForm() {
+    var formContent = `
+        <form action='#' method='post' name='calculadora'>
+            <label for='nombre'>Nombre:</label>
+            <input type='text' name='nombre' value='' required/>
+
+            <label for='apellidos'>Apellidos:</label>
+            <input type='text' name='apellidos' value='' required/>
+
+            <label for='nivel'>Nivel:</label>
+            <input type='text' name='nivel' readonly value='${this.nivel}'/>
+
+            <label for='tiempo'>Tiempo(s):</label>
+            <input type='text' name='tiempo' readonly value='${this.tiempo}'/>
+
+            <input type='submit' value='Enviar' name="insertarRecord"/>
+        </form>
+    `;
+    var h2 = $('<h2>').text('Formulario de registro de record');
+    var section = $('<section>').append(h2).append(formContent);
+    $('body').append(section);
+}
 }

@@ -74,7 +74,7 @@ class Pais {
                 const tempMinKelvin = dia.main.temp_min;
                 const tempMaxGrados = tempMaxKelvin - 273.15;
                 const tempMinGrados = tempMinKelvin - 273.15;
-                fila.append(`<td>${dia.dt_txt}</td>`);
+                fila.append(`<td>${dia.dt_txt.split(" ")[0]}</td>`);
                 fila.append(`<td>${tempMaxGrados.toFixed(1)}</td>`);
                 fila.append(`<td>${tempMinGrados.toFixed(1)}</td>`);
                 fila.append(`<td>${dia.main.humidity}</td>`);

@@ -1,0 +1,45 @@
+body > section:first-of-type{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+  }
+  
+  
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ccc; /* Puedes ajustar el color de fondo según tus preferencias */
+  }
+  
+  article {
+    width: calc(30% - 4em); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2em solid #000; 
+    padding-right: 1em;
+    padding-bottom: 6em;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,.3);
+    cursor: move;
+    transition: transform 0.5s, box-shadow 0.5s; 
+    height: 15em;
+    margin: 2em;
+  }
+  article > img{
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  article:hover {
+    transform: scale(1.05); 
+    box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.5); 
+  }

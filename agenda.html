@@ -12,6 +12,10 @@
 		<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 		<!-- Datos que describen el documento -->
 		<meta charset="UTF-8" />
+		<script
+  		src="https://code.jquery.com/jquery-3.7.1.min.js"
+  		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  		crossorigin="anonymous"></script>
 		<script src="js/agenda.js"></script>
 		
 		<title>Escritorio Virtual</title>
@@ -33,10 +37,14 @@
 				
 			</nav>
 			</header>
-		
+			<script>
+				var agenda = new Agenda('http://ergast.com/api/f1/current')
+				
+				
+			</script>
+			<section>
+				<button onclick="agenda.carreras(this)">Mostrar Carreras</button>
+			</section>
 	</body>
-<script>
-	var agenda = new Agenda('http://ergast.com/api/f1/current')
-	agenda.carreras()
-</script>
+
 </html>

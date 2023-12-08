@@ -8,21 +8,19 @@
 	<meta name ="keywords" content ="aquí cada documento debe tener la lista
 	de las palabras clave del mismo separadas por comas" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-	<link rel="stylesheet" type="text/css" href="estilo/viajes.css" />
+	<link rel="stylesheet" type="text/css" href="./estilo/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="./estilo/layout.css" />
+	<link rel="stylesheet" type="text/css" href="./estilo/api.css" />
+	<script src="js/api.js"></script>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<script src="js/viajes.js"></script>
     <title>Escritorio Virtual</title>
 	
 </head>
-
 <body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
     <header>
-		<h1>Viajes</h1>
+		<h1>Juego de memoria</h1>
 		<nav>
 			
 			 <a tabindex="1" accesskey="I" href="index.html">Home</a>
@@ -35,15 +33,10 @@
 			
 		</nav>
 		</header>
-		<script>
-			var viaje= new Viajes()
-		</script>
-		<section>
-			<button onclick="viaje.getMapaEstaticoMapbox()">Mostrar Mapa Estático</button>
-			<button onclick="viaje.getMapaDinamicoMapbox()">Mostrar Mapa Dinámico</button>
-			<input type="file"  name="xml" onchange="viaje.leerArchivoTexto(this)" accept=".xml"/>
-			<input type="file"  name="svgs" onchange="viaje.procesarSVGS(this)" accept=".svg" multiple/>
-		</section>
 	
+		<script>
+			var api=new Api();
+		</script>
 </body>
+
 </html>

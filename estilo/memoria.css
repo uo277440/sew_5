@@ -1,4 +1,4 @@
-body > section:first-of-type{
+body > section:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -29,8 +29,11 @@ body > section:first-of-type{
     transition: transform .5s;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
   }
-  article.flip {
+  article[data-state=flip] {
     transform: rotateY(180deg);
+}
+article[data-state=revealed] {
+  transform: rotateY(180deg);
 }
 
 article h3,
@@ -39,7 +42,6 @@ article img {
     width: 100%;
     height: 100%;
     position: absolute;
-    border-radius: 5px;
     background: #1C7CCC;
     backface-visibility: hidden;
 }

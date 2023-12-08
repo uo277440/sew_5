@@ -17,6 +17,7 @@ class Fondo{
             tags: "Nairobi",
             tagmode: "any",
             format: "json",
+            dataType: "json",
             per_page: 1,
             lon: '36.817223',
             lat: '-1.286389'
@@ -26,10 +27,10 @@ class Fondo{
             if (primeraFoto) {
                 console.log("Entre");
     
-                // Construir la URL de la imagen
+                
                 var url = "https://live.staticflickr.com/" + primeraFoto.server + "/" + primeraFoto.id + "_" + primeraFoto.secret + "_b.jpg";
     
-                // Establecer la imagen como fondo del body con background-size: cover
+                
                 contenedor.css({
                     "background-image": "url('" + url + "')",
                     "background-size": "cover"

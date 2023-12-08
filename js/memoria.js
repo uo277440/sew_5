@@ -71,13 +71,13 @@ class Memoria{
                 game.firstCard=this.lastChild.getAttribute('alt')
                 this.lastChild.hidden = false;
                 this.setAttribute("data-state","flip")
-                this.classList.add('flip');
+                //this.classList.add('flip');
       
             }else{
                 game.secondCard=this.lastChild.getAttribute('alt')
                 this.lastChild.hidden = false;
                 this.setAttribute("data-state","flip")
-                this.classList.add('flip');
+                //this.classList.add('flip');
                 setTimeout(() => {
                     game.checkForMatch();
                   }, "2000");
@@ -115,7 +115,7 @@ class Memoria{
         for (var i = 0; i < cards.length; i++) {
             cards[i].dataset.state = "default";
 
-            cards[i].classList.remove('flip');
+          //  cards[i].classList.remove('flip');
 
             cards[i].lastChild.hidden=true;
           }
@@ -144,8 +144,11 @@ class Memoria{
     }
     // Método para crear nodos article en el documento HTML
     createElements() {
-        var tableroBarajado = document.querySelector('body > section:first-of-type');
-
+        var section = document.createElement('section')
+        var body = document.querySelector('body');
+        var titulo = document.createElement('h2')
+        titulo.textContent = 'JUEGO DE MEMORIA'
+        section.appendChild(titulo)
     for (var e in this.tablero) {
             var tarjeta = this.tablero[e];
 
@@ -165,10 +168,11 @@ class Memoria{
             img.setAttribute("hidden",true);
             article.appendChild(img); 
             
-            tableroBarajado.appendChild(article);
+            section.appendChild(article);
 
             
     }
+    body.append(section)
 }
 
 

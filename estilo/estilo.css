@@ -77,13 +77,7 @@ ul > li:nth-child(3) ul li {
 li ul{
   list-style-image:url(../multimedia/videogame.svg)
 }
-/*Especificidad: 001*/
-ul,
-ol,
-dl,
-p {
-  font-size: 1.5em;
-}
+
 /*Especificidad: 001*/
 li,
 p {

@@ -25,13 +25,15 @@ class Sudoku{
           }
     }
     createStructure() {
-        var contenedor = document.querySelector('main'); 
+        var main=document.createElement('main');
+        var contenedor = document.querySelector('body'); 
         for (var i = 0; i < this.filas; i++) {
           for (var j = 0; j < this.columnas; j++) {
             var p = document.createElement('p');
-            contenedor.appendChild(p);
+            main.appendChild(p);
           }
         }
+        contenedor.append(main)
       }
     paintSudoku(){
         this.createStructure()
