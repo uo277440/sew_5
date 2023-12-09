@@ -82,7 +82,7 @@ class Pais {
         
                 
                 const iconoTiempo = $("<img>");
-                iconoTiempo.attr("src", `https://openweathermap.org/img/wn/${dia.weather[0].icon}.png`);
+                iconoTiempo.attr({"src": `https://openweathermap.org/img/wn/${dia.weather[0].icon}.png`,"alt": `${dia.weather[0].description}`});
                 const celdaIcono = $("<td></td>").append(iconoTiempo);
                 fila.append(celdaIcono);
         

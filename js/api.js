@@ -22,31 +22,34 @@ class Api {
 
     dibujarTablero() {
         var section = document.createElement('section')
+        var h2 = document.createElement('h2')
+        h2.textContent='¡ Aprende los sonidos de los animales !'
+        section.appendChild(h2)
         var body = document.querySelector('body')
 
         for (let i = 0; i < this.animals.length; i++) {
-            let article = document.createElement('article')
-            article.setAttribute("data-state", "default")
+            let figure = document.createElement('figure')
+            figure.setAttribute("data-state", "default")
             let img = document.createElement("img");
             img.setAttribute("src", './multimedia/' + this.animals[i] + '.png');
             img.setAttribute("alt", this.animals[i]);
-            article.appendChild(img);
-            article.addEventListener("dragstart", (e) => this.handleDragStart(e, i,article));
-            article.addEventListener("dragover", (e) => this.handleDragOver(e)); 
-            section.appendChild(article);
+            figure.appendChild(img);
+            figure.addEventListener("dragstart", (e) => this.handleDragStart(e, i,figure));
+            figure.addEventListener("dragover", (e) => this.handleDragOver(e)); 
+            section.appendChild(figure);
         }
 
         for (let i = 0; i < this.boxes.length; i++) {
-            let article = document.createElement('article')
-            article.setAttribute("data-state", "default")
+            let figure = document.createElement('figure')
+            figure.setAttribute("data-state", "default")
             var img = document.createElement("img");
             img.setAttribute("src", './multimedia/jaula.png');
             img.setAttribute("alt", 'jaula' + (i + 1));
-            article.appendChild(img);
-            article.addEventListener("click", () => this.playSound(i,article))
-            article.addEventListener("dragover", (e) => this.handleDragOver(e)); 
-            article.addEventListener("drop", (e) => this.handleDrop(e, article));
-            section.appendChild(article);
+            figure.appendChild(img);
+            figure.addEventListener("click", () => this.playSound(i,figure))
+            figure.addEventListener("dragover", (e) => this.handleDragOver(e)); 
+            figure.addEventListener("drop", (e) => this.handleDrop(e, figure));
+            section.appendChild(figure);
         }
 
         body.append(section)
@@ -56,9 +59,9 @@ class Api {
         this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
     }
 
-    playSound(i,article) {
-        var articleSound = document.querySelectorAll('article[data-state="sound"]')
-        if(articleSound.length===0 && article.dataset.state!=="correct"){
+    playSound(i,figure) {
+        var figureSound = document.querySelectorAll('figure[data-state="sound"]')
+        if(figureSound.length===0 && figure.dataset.state!=="correct"){
         if (!this.audioContext) {
             this.iniciarAudioContext();
         }
@@ -74,9 +77,9 @@ class Api {
             .then(decodedData => {
                 soundSource.buffer = decodedData;
                 soundSource.connect(this.audioContext.destination);
-                article.setAttribute("data-state","sound")
+                figure.setAttribute("data-state","sound")
                 soundSource.onended = () => {
-                    article.setAttribute("data-state","default")
+                    figure.setAttribute("data-state","default")
                 };
                
                 soundSource.start()
@@ -90,32 +93,32 @@ class Api {
 
     
 
-    handleDragStart(event, i,article) {
+    handleDragStart(event, i,figure) {
          localStorage.setItem("selectedAnimal", i);
-         article.setAttribute("data-state","draged")
+         figure.setAttribute("data-state","draged")
     }
 
     handleDragOver(event) {
         event.preventDefault();
     }
 
-    handleDrop(event, article) {
+    handleDrop(event, figure) {
         event.preventDefault();
         const animalIndex = parseInt(event.dataTransfer.getData("text/plain"));
-        const boxIndex = Array.from(event.currentTarget.parentNode.children).indexOf(event.currentTarget)
+        const boxIndex = Array.from(document.querySelectorAll('figure')).indexOf(event.currentTarget)
         const selectedAnimal = localStorage.getItem("selectedAnimal");
-        var articleDraged = document.querySelector('article[data-state="draged"]')
-        if(!(article.dataset.state==="correct" || articleDraged.dataset.state==="correct")){
+        var figureDraged = document.querySelector('figure[data-state="draged"]')
+        if(!(figure.dataset.state==="correct" || figureDraged.dataset.state==="correct")){
         if (this.animals[selectedAnimal] === this.boxes[boxIndex-3]) {
             alert("¡Correcto!")
             
-            articleDraged.lastChild.setAttribute("src","./multimedia/tick.png")
-            article.lastChild.setAttribute("src","./multimedia/tick.png")
-            articleDraged.setAttribute("data-state","correct")
-            article.setAttribute("data-state","correct")
+            figureDraged.lastChild.setAttribute("src","./multimedia/tick.png")
+            figure.lastChild.setAttribute("src","./multimedia/tick.png")
+            figureDraged.setAttribute("data-state","correct")
+            figure.setAttribute("data-state","correct")
         } else {
             alert("Incorrecto. Intenta de nuevo.")
-            articleDraged.setAttribute("data-state","default")
+            figureDraged.setAttribute("data-state","default")
         }
         
         localStorage.removeItem("selectedAnimal");

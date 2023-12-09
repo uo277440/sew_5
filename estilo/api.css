@@ -1,4 +1,4 @@
-body > section:first-of-type{
+body > section:nth-of-type(2){
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -6,15 +6,16 @@ body > section:first-of-type{
     margin: 3em;
   }
   
-  
   h2 {
     width: 100%;
     text-align: center;
-    padding: 10px;
-    background-color: #ccc; /* Puedes ajustar el color de fondo según tus preferencias */
+    padding: 0.625em;
+    
   }
   
-  article {
+
+  
+  figure {
     width: calc(30% - 4em); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
     display: flex;
     flex-direction: column;
@@ -31,7 +32,7 @@ body > section:first-of-type{
     height: 15em;
     margin: 2em;
   }
-  article > img{
+  figure > img{
     align-content: center;
     justify-content: center;
     width: 100%;
@@ -39,7 +40,7 @@ body > section:first-of-type{
   }
 
 
-  article:hover {
+  figure:hover {
     transform: scale(1.05); 
     box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.5); 
   }

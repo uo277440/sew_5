@@ -27,8 +27,7 @@ p[data-state = "correct"]{
     background-color: rgb(231, 238, 235);
     font-size: 1.5em;
 }
-/* Estilos para una mediaquery
-que muestre la botonera en tablet y móvil */
+
 @media screen and (min-width: 600px){
     section[data-type=botonera] {
         display: none;

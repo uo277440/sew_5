@@ -16,7 +16,7 @@ main {
     background-color: rgb(215, 219, 218);
   }
   p {
-    border: 1px solid #5f5a5a;
+    border: 0.0625em solid #5f5a5a;
     text-align: center;
     margin: 0;
   }

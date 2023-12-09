@@ -44,7 +44,6 @@ class Sudoku{
                 if(this.tablero[i][j]!='0'){
                     parrafos[pn].textContent = this.tablero[i][j];
                     parrafos[pn].setAttribute("data-state","blocked")
-                    parrafos[pn].setAttribute("strong",true)
                     
                 }else{
                     parrafos[pn].textContent = "";

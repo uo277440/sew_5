@@ -97,6 +97,7 @@ if (!isset($_SESSION["db"])) {
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="./estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="./estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="./estilo/juegos.css" />
 	<link rel="stylesheet" type="text/css" href="./estilo/crucigrama.css" />
 	<script src="js/crucigrama.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -121,18 +122,17 @@ if (!isset($_SESSION["db"])) {
 			
 		</nav>
 		</header>
-    <main>
-		
-		<section>
+        <section>
 			<h2>Juegos disponibles</h2>
 				<nav>
 					<menu>
-						<li><a href="memoria.html">Juego de memoria</a></li>
-						<li><a href="crucigrama.php">Crucigrama</a></li>
-						<li><a href="api.html">ApiGame</a></li>
+                    <li><a href="sudoku.html">Sudoku</a></li>
+                    <li><a href="memoria.html">Memoria</a></li>
+                    <li><a href="api.html">ApiGame</a></li>
 					</menu>
 				</nav>
 			</section>
+    <main>
         <section data-type="instrucciones">
             <h2>Instrucciones</h2>
             <p>Se deben completar los huecos en blanco utilizando números del 1-9 y los operadores matemáticos básicos *(multiplicar) /(dividir) +(sumar) -(restar)</p>

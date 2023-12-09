@@ -69,13 +69,11 @@ class Memoria{
             
             if(game.firstCard==null){
                 game.firstCard=this.lastChild.getAttribute('alt')
-                this.lastChild.hidden = false;
                 this.setAttribute("data-state","flip")
                 //this.classList.add('flip');
       
             }else{
                 game.secondCard=this.lastChild.getAttribute('alt')
-                this.lastChild.hidden = false;
                 this.setAttribute("data-state","flip")
                 //this.classList.add('flip');
                 setTimeout(() => {
@@ -117,7 +115,6 @@ class Memoria{
 
           //  cards[i].classList.remove('flip');
 
-            cards[i].lastChild.hidden=true;
           }
         this.resetBoard();
     }
@@ -165,7 +162,6 @@ class Memoria{
             var img = document.createElement("img");
             img.setAttribute("src", tarjeta.source);
             img.setAttribute("alt", tarjeta.elemento);
-            img.setAttribute("hidden",true);
             article.appendChild(img); 
             
             section.appendChild(article);

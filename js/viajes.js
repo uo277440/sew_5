@@ -54,7 +54,7 @@ class Viajes{
         
         section.appendChild (img)
         body.append(section)
-        var primerBoton = document.querySelector('button:nth-child(1)')
+        var primerBoton = document.querySelector('button')
         primerBoton.disabled = true
     }
     getMapaDinamicoMapbox() {   
@@ -75,7 +75,7 @@ class Viajes{
            
         
             
-            var segundoBoton = document.querySelector('button:nth-child(2)')
+            var segundoBoton = document.querySelector('button:nth-of-type(2)')
             segundoBoton.disabled = true
 
            
@@ -99,10 +99,12 @@ class Viajes{
     
             reader.onload = (e) => {
                 const svgContent = e.target.result;
-    
+                var h2 = $('<h2>').text($(svgContent).find('title').text())
                
-                const article = $('<article>').html(svgContent);
-    
+                const article = $('<article>');
+                article.append(h2)
+                article.append(svgContent)
+                
               
                 $('body').append(article);
             };
@@ -121,7 +123,7 @@ class Viajes{
             const $xml = $(xml);
             $xml.find('ruta').each(function () {
                 const $ruta = $(this);
-                const $article = $('<article>').addClass('ruta');
+                const $article = $('<article>');
 
                 $article.append(`<h2>${$ruta.attr('nombre')}</h2>`);
                 $article.append(`<p>Descripción de la ruta: ${$ruta.attr('descripcion')}</p>`);
@@ -164,7 +166,7 @@ class Viajes{
                         const $ulFotos = $('<ul>');
                         $fotosHito.each(function() {
                             const $foto = $(this);
-                            const $img = $('<img>').attr('src', $foto.text());
+                            const $img = $('<img>').attr({'src': $foto.text(),'alt': $hito.attr('nombre')});
                             $ulFotos.append($('<li>').append($img));
                         });
                         $liHito.append($ulFotos);

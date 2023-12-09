@@ -3,20 +3,21 @@ body > section:nth-of-type(2) {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    height: 25em;
   }
   
   
   h2 {
     width: 100%;
     text-align: center;
-    padding: 10px;
-    background-color: #ccc; /* Puedes ajustar el color de fondo según tus preferencias */
+    padding: 0.625em;
+    
   }
   
   article {
-    width: calc(20% - 4em); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
-    height: 30em;
-    margin:3em;
+    width: calc(25% - 4em); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
+    height: 10em;
+    margin:1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +28,7 @@ body > section:nth-of-type(2) {
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform .5s;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    
   }
   article[data-state=flip] {
     transform: rotateY(180deg);
