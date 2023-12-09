@@ -37,7 +37,8 @@
 		<script>
 			var noticia = new Noticias()
 		</script>
-		<input type="file" onchange="noticia.readInputFile(this)"/>
+		<label for="noticias">Cargar Noticias:</label>
+		<input id="noticias" type="file" onchange="noticia.readInputFile(this)"/>
 		<section>
 			<h2>Añadir Noticia</h2>
   			<label for="titular">Titular:</label>

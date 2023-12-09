@@ -42,8 +42,10 @@
 			<h2>Opciones de carga</h2>
 			<button onclick="viaje.getMapaEstaticoMapbox()">Mostrar Mapa Estático</button>
 			<button onclick="viaje.getMapaDinamicoMapbox()">Mostrar Mapa Dinámico</button>
-			<input type="file"  name="xml" onchange="viaje.leerArchivoTexto(this)" accept=".xml"/>
-			<input type="file"  name="svgs" onchange="viaje.procesarSVGS(this)" accept=".svg" multiple/>
+			<label for="xml">Procesar XML:</label>
+			<input type="file"  id="xml" onchange="viaje.leerArchivoTexto(this)" accept=".xml" />
+			<label for="svgs">Procesar svgs:</label>
+			<input type="file"  id="svgs" onchange="viaje.procesarSVGS(this)" accept=".svg" multiple/>
 		</section>
 	
 </body>
