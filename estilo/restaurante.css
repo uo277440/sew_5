@@ -39,8 +39,8 @@ input[type="radio"] {
 }
 /*Especificidad: 011*/
 input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #6EFF72;
+    color: #000000;
     padding: 0.625em;
     border: none;
     border-radius: 0.25em;
