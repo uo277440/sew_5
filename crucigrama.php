@@ -112,13 +112,14 @@ if (!isset($_SESSION["db"])) {
 		<h1>Crucigrama</h1>
 		<nav>
 			
-			 <a tabindex="1" accesskey="I" href="index.html">Home</a>
-			 <a tabindex="2" href="sobremi.html">Current Events</a>
-			 <a tabindex="3" href="agenda.html">Agenda</a>
-			 <a tabindex="4" href="juegos.html">Juegos</a>
-			 <a tabindex="5" href="viajes.html">Viajes</a>
-			 <a tabindex="6" href="metereologia.html">Metereología</a>
-			 <a tabindex="7" href="noticias.html">Noticias</a>
+			 <a tabindex="1" accesskey="I" href="index.html">Inicio</a>
+			 <a tabindex="2" accesskey="S" href="sobremi.html">Sobre mi</a>
+			 <a tabindex="3" accesskey="A" href="agenda.html">Agenda</a>
+			 <a tabindex="4" accesskey="J" href="juegos.html">Juegos</a>
+			 <a tabindex="5" accesskey="V" href="viajes.php">Viajes</a>
+			 <a tabindex="6" accesskey="M" href="metereologia.html">Metereología</a>
+			 <a tabindex="7" accesskey="N" href="noticias.html">Noticias</a>
+			 <a tabindex="8" accesskey="R" href="restaurante.php">Restaurante</a>
 			
 		</nav>
 		</header>
@@ -133,7 +134,7 @@ if (!isset($_SESSION["db"])) {
 				</nav>
 			</section>
     <main>
-        <section data-type="instrucciones">
+        <section>
             <h2>Instrucciones</h2>
             <p>Se deben completar los huecos en blanco utilizando números del 1-9 y los operadores matemáticos básicos *(multiplicar) /(dividir) +(sumar) -(restar)</p>
         </section>

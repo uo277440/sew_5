@@ -21,17 +21,16 @@ class Agenda{
 
     
             var races = $('Race',data)
-            const tabla = $('<table>').addClass('table');
+            const tabla = $('<table></table>');
             const encabezado = `
-              <thead>
+              <caption>Datos del circuito actual</caption>
                 <tr>
-                  <th>Nombre de la Carrera</th>
-                  <th>Circuito</th>
-                  <th>Coordenadas</th>
-                  <th>Fecha</th>
-                  <th>Hora</th>
+                  <th scope='col' id='nombre'>Nombre de la Carrera</th>
+                  <th scope='col' id='circuito'>Circuito</th>
+                  <th scope='col' id='coordenadas'>Coordenadas</th>
+                  <th scope='col' id='fecha'>Fecha</th>
+                  <th scope='col' id='hora'>Hora</th>
                 </tr>
-              </thead>
             `;
             tabla.append(encabezado);
     

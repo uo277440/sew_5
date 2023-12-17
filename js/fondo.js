@@ -8,8 +8,8 @@ class Fondo{
         var contenedor = $('body');
         var flickrAPI = "https://api.flickr.com/services/rest/?jsoncallback=?";
         var apiKey = "e62b6576baa78066f8e22c2f580cdb0c";
-        var latitud = this.coordendasCapital.split(';')[0];
-        var longitud = this.coordendasCapital.split(';')[1];
+        var latitud = this.coordendasCapital.split(';')[1];
+        var longitud = this.coordendasCapital.split(';')[0];
     
         $.getJSON(flickrAPI, {
             method: "flickr.photos.search",
@@ -19,8 +19,8 @@ class Fondo{
             format: "json",
             dataType: "json",
             per_page: 1,
-            lon: '36.817223',
-            lat: '-1.286389'
+            lon: longitud,
+            lat: latitud
         })
         .done(function (data) {
             var primeraFoto = data.photos.photo[0];

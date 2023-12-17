@@ -1,3 +1,4 @@
+/*Especificidad: 002*/
 body > section{
     border: 0.3em solid #000000; 
     padding: 2em; 

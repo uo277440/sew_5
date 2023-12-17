@@ -1,3 +1,4 @@
+/*Especificidad: 012*/
 body > section:nth-of-type(2){
     display: flex;
     flex-wrap: wrap;
@@ -5,7 +6,7 @@ body > section:nth-of-type(2){
     justify-content: center;
     margin: 3em;
   }
-  
+  /*Especificidad: 001*/
   h2 {
     width: 100%;
     text-align: center;
@@ -14,9 +15,9 @@ body > section:nth-of-type(2){
   }
   
 
-  
+  /*Especificidad: 001*/
   figure {
-    width: calc(30% - 4em); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
+    width: calc(30% - 4em); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,13 +26,13 @@ body > section:nth-of-type(2){
     padding-bottom: 6em;
     transform: scale(1);
     transform-style: preserve-3d;
+    /*Redefinición de transition*/
     transition: transform .5s;
-    box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,.3);
     cursor: move;
-    transition: transform 0.5s, box-shadow 0.5s; 
     height: 15em;
     margin: 2em;
   }
+  /*Especificidad: 002*/
   figure > img{
     align-content: center;
     justify-content: center;
@@ -39,8 +40,7 @@ body > section:nth-of-type(2){
     height: 100%;
   }
 
-
+/*Especificidad: 011*/
   figure:hover {
     transform: scale(1.05); 
-    box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.5); 
   }

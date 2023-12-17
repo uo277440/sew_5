@@ -1,0 +1,54 @@
+/*Especificidad: 001*/
+form,section{
+    /* Hereda color de body estilo.css #000 */
+    max-width: 25em;
+    margin: 1.25em auto;
+    background-color: #fff;
+    padding: 1.25em;
+    border-radius: 0.5em;
+}
+/*Especificidad: 001*/
+label {
+    /* Hereda background-color de form #fff */
+    display: block;
+    margin-bottom: 0.625em;
+    color: #333;
+    width: 50%;
+}
+/*Especificidad: 001*/
+input {
+    width: 100%;
+    padding: 0.625em;
+    margin-bottom: 0.625em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+}
+input[type=radio] {
+    width: 40%;
+}
+/*Especificidad: 001*/
+h2,h3 {
+    /* Hereda background-color de body #DED9CD */
+    color: #000;
+    margin-bottom: 0.625em;
+    text-align: center;
+}
+/*Especificidad: 011*/
+input[type="radio"] {
+    margin-right: 0.3125em;
+}
+/*Especificidad: 011*/
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.625em;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-size: 1em;
+}
+/*Especificidad: 021*/
+input[type="submit"]:hover {
+    /* Hereda background-color de body estilo.css #DED9CD */
+    background-color: #45a049;
+}

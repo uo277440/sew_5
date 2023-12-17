@@ -1,3 +1,4 @@
+/*Especificidad: 001*/
 main {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -7,41 +8,53 @@ main {
     width: 500px;
     height: 500px;
     
-    
   }
+  /*Especificidad: 011*/
   p[data-state='clicked']{
-    background-color: rgb(179, 216, 204);
+     /* Hereda color de body estilo.css #000 */
+    background-color: #B3D8CC;
   }
+  /*Especificidad: 011*/
   p[data-state='blocked']{
-    background-color: rgb(215, 219, 218);
+     /* Hereda color de body estilo.css #000 */
+    background-color: #D7DBDA;
   }
+  /*Especificidad: 001*/
   p {
     border: 0.0625em solid #5f5a5a;
-    text-align: center;
     margin: 0;
   }
+  /*Especificidad: 011*/
   p:nth-child(3n){
     border-right: 0.2em solid black;
   }
   
-  
+/*Especificidad: 011*/
 p:nth-child(9n + 1) {
   border-left: 0.2em solid black; 
 }
 
-
+/*Especificidad: 021*/
 p:nth-child(n):nth-child(-n + 9) {
+  /* Redefinición de border-top */
   border-top: 0.2em solid black;
 }
+/*Especificidad: 021*/
 p:nth-child(n + 28):nth-child(-n + 36) {
+  /* Redefinición de border-top */
   border-top: 0.2em solid black;
 }
+/*Especificidad: 021*/
 p:nth-child(n + 55):nth-child(-n + 63) {
+  /* Redefinición de border-top */
   border-top: 0.2em solid black;
 }
+/*Especificidad: 021*/
 p:nth-child(n + 28):nth-child(-n + 36) {
+  /* Redefinición de border-top */
   border-top: 0.2em solid black;
 }
+/*Especificidad: 021*/
 p:nth-child(n + 73):nth-child(-n + 81) {
   border-bottom: 0.2em solid black;
 }

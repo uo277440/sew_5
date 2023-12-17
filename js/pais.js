@@ -56,14 +56,15 @@ class Pais {
             const contenedor = $('body');
         
             const tabla = $("<table></table>");
-        
+            const caption=$("<caption>Pronósticos próximos 5 días</caption>")
+            tabla.append(caption)
             const filaEncabezado = $("<tr></tr>");
-            filaEncabezado.append("<th>Fecha</th>");
-            filaEncabezado.append("<th>Temperatura Máxima (°C)</th>");
-            filaEncabezado.append("<th>Temperatura Mínima (°C)</th>");
-            filaEncabezado.append("<th>Humedad (%)</th>");
-            filaEncabezado.append("<th>Cantidad de Lluvia (mm)</th>");
-            filaEncabezado.append("<th>Icono</th>");
+            filaEncabezado.append("<th scope='col' id='fechas'>Fecha</th>");
+            filaEncabezado.append("<th scope='col' id='tmax'>Temperatura Máxima (°C)</th>");
+            filaEncabezado.append("<th scope='col' id='tmin'>Temperatura Mínima (°C)</th>");
+            filaEncabezado.append("<th scope='col' id='humedad'>Humedad (%)</th>");
+            filaEncabezado.append("<th scope='col' id='lluvia'>Cantidad de Lluvia (mm)</th>");
+            filaEncabezado.append("<th scope='col' id='icono'>Icono</th>");
             tabla.append(filaEncabezado);
             for (let i = 0; i < pronostico.length; i += 8) {
                 const dia = pronostico[i];

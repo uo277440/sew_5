@@ -3,7 +3,52 @@ class Viajes{
         navigator.geolocation.getCurrentPosition(this.getPosicion.bind(this), this.verErrores.bind(this));
         this.accessToken='pk.eyJ1IjoidW8yNzc0NDAiLCJhIjoiY2wyaXBhaGZkMDc4YjNqcW5qenY5MjFvOCJ9.0oTGSdJTHf7bwxxiK9jCKg';
         mapboxgl.accessToken = this.accessToken
+
+        this.slides = null;
+        this.nextSlideBtn = null;
+        this.prevSlideBtn = null;
+        this.curSlide = null;
+        this.maxSlide = null;
     }
+    init() {
+        this.slides = document.querySelectorAll("img");
+        this.nextSlideBtn = document.querySelector("button[data-action='next']");
+        this.prevSlideBtn = document.querySelector("button[data-action='prev']");
+        this.curSlide = 9;
+
+
+        this.maxSlide = this.slides.length - 1;
+    
+        this.nextSlideBtn.addEventListener("click", this.nextSlide.bind(this));
+        this.prevSlideBtn.addEventListener("click", this.prevSlide.bind(this));
+      }
+    
+      nextSlide() {
+        if (this.curSlide === this.maxSlide) {
+          this.curSlide = 0;
+        } else {
+          this.curSlide++;
+        }
+    
+        this.moveSlides();
+      }
+    
+      prevSlide() {
+        if (this.curSlide === 0) {
+          this.curSlide = this.maxSlide;
+        } else {
+          this.curSlide--;
+        }
+    
+        this.moveSlides();
+      }
+    
+      moveSlides() {
+        this.slides.forEach((slide, indx) => {
+          var trans = 100 * (indx - this.curSlide);
+          $(slide).css('transform', 'translateX(' + trans + '%)'); //permitido
+        });
+      }
     getPosicion(posicion){
         this.longitud         = posicion.coords.longitude; 
         this.latitud          = posicion.coords.latitude;  
@@ -41,6 +86,7 @@ class Viajes{
     getMapaEstaticoMapbox() {
         
         var section = document.createElement('section')
+        section.setAttribute("data-state",'mapa')
         var h2=document.createElement('h2')
         h2.textContent="Mapa estático"
         section.appendChild(h2)
@@ -58,16 +104,19 @@ class Viajes{
         primerBoton.disabled = true
     }
     getMapaDinamicoMapbox() {   
-        var body = document.querySelector('body') 
+        var body = document.querySelector('body');
         var section = document.createElement('section')
         var h2=document.createElement('h2')
         h2.textContent="Mapa dinámico"
-        section.appendChild(h2)
-
+        var aside = document.createElement('aside');
+        section.setAttribute("data-state",'mapa')
+        section.appendChild(h2);
+        section.appendChild(aside);
         body.append(section)
+
         
             const map = new mapboxgl.Map({
-                container: section,
+                container: aside,
                 style: 'mapbox://styles/mapbox/streets-v11',
                 center: [this.longitud, this.latitud],
                 zoom: 12
@@ -79,6 +128,94 @@ class Viajes{
             segundoBoton.disabled = true
 
            
+        }
+        getMapaDinamicoMapboxKml(kmlFiles) {
+            var body = document.querySelector('body');
+            var section = document.createElement('section')
+            var h2=document.createElement('h2')
+            h2.textContent="Mapa dinámico con KML"
+            var aside = document.createElement('aside');
+            section.setAttribute("data-state",'mapa')
+            section.appendChild(h2);
+            section.appendChild(aside);
+            body.append(section)
+        
+            const map = new mapboxgl.Map({
+                container: aside,
+                style: 'mapbox://styles/mapbox/streets-v11',
+                zoom: 12
+            });
+        
+
+        
+            function handleFile(file) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    var kmlData = e.target.result;
+                    var arrayKML = []
+                    
+                    $(kmlData).find('Placemark').each(function () {
+                        var name = $(this).find('name').text();
+                        var coordinates = $(this).find('coordinates').text().split(',');
+                        var longitude = parseFloat(coordinates[0]);
+                        var latitude = parseFloat(coordinates[1]);
+
+                         map.setCenter([longitude, latitude]);
+                         arrayKML.push([longitude,latitude])
+                        
+                        
+                    });
+                    var primero = arrayKML[0]
+                    arrayKML.push(primero)
+                    map.on('load', () => {
+                        var id  = 'maine'+Math.random()
+                        // Add a data source containing GeoJSON data.
+                        map.addSource(id, {
+                        'type': 'geojson',
+                        'data': {
+                        'type': 'Feature',
+                        'geometry': {
+                        'type': 'Polygon',
+                        // These coordinates outline Maine.
+                        'coordinates': [
+                            arrayKML
+                        ]
+                        }
+                        }
+                        });
+                         
+                        // Add a new layer to visualize the polygon.
+                        map.addLayer({
+                        'id': id,
+                        'type': 'fill',
+                        'source': id, // reference the data source
+                        'layout': {},
+                        'paint': {
+                        'fill-color': '#0080ff', // blue color fill
+                        'fill-opacity': 0.5
+                        }
+                        });
+                        // Add a black outline around the polygon.
+                        map.addLayer({
+                        'id': 'outline'+Math.random(),
+                        'type': 'line',
+                        'source': id,
+                        'layout': {},
+                        'paint': {
+                        'line-color': '#000',
+                        'line-width': 3
+                        }
+                        });
+                        });
+                };
+        
+                reader.readAsText(file);
+            }
+            const files = kmlFiles.files;
+                for (var i = 0; i < files.length; i++) {
+                    handleFile(files[i]);
+                }
         }
         procesarSVGS(input) {
             const files = input.files;
@@ -111,6 +248,7 @@ class Viajes{
     
             reader.readAsText(file);
         }
+    
     leerArchivoTexto(fileInput) { 
         
       var tipoTexto = /xml.*/;

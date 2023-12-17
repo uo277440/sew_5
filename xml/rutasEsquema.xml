@@ -19,6 +19,19 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
             <referencia>https://www.aventuraafrica.com/paises/kenia/destinos/masai-mara</referencia>
         </referencias>
         <hitos>
+            <hito nombre="Colina Oloololo" descripcion="Punto panorámico que brinda vistas impresionantes de la Reserva Nacional de Maasai Mara, ideal para apreciar la extensión de la fauna y la belleza natural">
+                <coordenadas>
+                    <longitud>35.095244</longitud>
+                    <latitud>-1.439476</latitud>
+                    <altitud>1539</altitud>
+                </coordenadas>
+                <distanciaAnterior unidad="km">82</distanciaAnterior>
+                <fotoHitos>
+                    <fotoHito>./multimedia/fotosRutas/oloololo.jpg</fotoHito>
+                </fotoHitos>
+                <videosHito>
+                </videosHito>
+            </hito>
             <hito nombre="Rio Mara" descripcion="Importante curso de agua que añade dramatismo a la Gran Migración y ofrece escenarios pintorescos para la observación de vida silvestre.">
                 <coordenadas>
                     <longitud>35.232635</longitud>
@@ -34,8 +47,8 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
             </hito>
             <hito nombre="Gran Migracion" descripcion="Espectáculo único donde millones de ñus y cebras migran en busca de pastos frescos en la Reserva Nacional de Maasai Mara">
                 <coordenadas>
-                    <longitud>35.131388</longitud>
-                    <latitud>-1.426111</latitud>
+                    <longitud>35.37897</longitud>
+                    <latitud>-1.41332</latitud>
                     <altitud>1420</altitud>
                 </coordenadas>
                 <distanciaAnterior unidad="km">219</distanciaAnterior>
@@ -45,19 +58,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 <videosHito>
                 </videosHito>
             </hito>
-            <hito nombre="Colina Oloololo" descripcion="Punto panorámico que brinda vistas impresionantes de la Reserva Nacional de Maasai Mara, ideal para apreciar la extensión de la fauna y la belleza natural">
-                <coordenadas>
-                    <longitud>35.095244</longitud>
-                    <latitud>-1.439476</latitud>
-                    <altitud>1539</altitud>
-                </coordenadas>
-                <distanciaAnterior unidad="km">82</distanciaAnterior>
-                <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/oloololo.jpg</fotoHito>
-                </fotoHitos>
-                <videosHito>
-                </videosHito>
-            </hito>
+            
            
         </hitos>
         <recomendacion>6</recomendacion>
@@ -79,6 +80,19 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
             <referencia>https://udare.es/parque-nacional-aberdare-en-kenia/</referencia>
         </referencias>
         <hitos>
+            <hito nombre="Refugio de Pesca de Treetops" descripcion="Punto de interés en el bosque, conocido por ofrecer experiencias únicas de observación de vida silvestre desde plataformas elevadas">
+                <coordenadas>
+                    <longitud>36.460897</longitud>
+                    <latitud>0.546110</latitud>
+                    <altitud>1978</altitud>
+                </coordenadas>
+                <distanciaAnterior unidad="km">140</distanciaAnterior>
+                <fotoHitos>
+                    <fotoHito>./multimedia/fotosRutas/pesca.jpg</fotoHito>
+                </fotoHitos>
+                <videosHito>
+                </videosHito>
+            </hito>
             <hito nombre="Arbol gigante Gatamaiyu" descripcion="Majestuoso árbol en el Bosque Aberdare, destacado por su grandiosidad y significado en la región">
                 <coordenadas>
                     <longitud>36.430723</longitud>
@@ -105,20 +119,6 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 <videosHito>
                 </videosHito>
             </hito>
-            <hito nombre="Refugio de Pesca de Treetops" descripcion="Punto de interés en el bosque, conocido por ofrecer experiencias únicas de observación de vida silvestre desde plataformas elevadas">
-                <coordenadas>
-                    <longitud>36.460897</longitud>
-                    <latitud>0.546110</latitud>
-                    <altitud>1978</altitud>
-                </coordenadas>
-                <distanciaAnterior unidad="km">140</distanciaAnterior>
-                <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/pesca.jpg</fotoHito>
-                </fotoHitos>
-                <videosHito>
-                </videosHito>
-            </hito>
-           
         </hitos>
         <recomendacion>6</recomendacion>
     </ruta>
@@ -152,19 +152,6 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 <videosHito>
                 </videosHito>
             </hito>
-            <hito nombre="Hell's Gate National Park" descripcion="Parque nacional en la orilla del lago, conocido por sus imponentes formaciones rocosas y actividades recreativas, como ciclismo y senderismo">
-                <coordenadas>
-                    <longitud>36.359298</longitud>
-                    <latitud>-0.901683</latitud>
-                    <altitud>2095</altitud>
-                </coordenadas>
-                <distanciaAnterior unidad="km">80</distanciaAnterior>
-                <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/parque.jpg</fotoHito>
-                </fotoHitos>
-                <videosHito>
-                </videosHito>
-            </hito>
             <hito nombre="Piedras Fischer's Tower" descripcion="Formación rocosa distintiva en el parque, atractiva para escaladores y amantes de la geología">
                 <coordenadas>
                     <longitud>36.353431</longitud>
@@ -178,7 +165,19 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 <videosHito>
                 </videosHito>
             </hito>
-           
+            <hito nombre="Hell's Gate National Park" descripcion="Parque nacional en la orilla del lago, conocido por sus imponentes formaciones rocosas y actividades recreativas, como ciclismo y senderismo">
+                <coordenadas>
+                    <longitud>36.359298</longitud>
+                    <latitud>-0.901683</latitud>
+                    <altitud>2095</altitud>
+                </coordenadas>
+                <distanciaAnterior unidad="km">80</distanciaAnterior>
+                <fotoHitos>
+                    <fotoHito>./multimedia/fotosRutas/parque.jpg</fotoHito>
+                </fotoHitos>
+                <videosHito>
+                </videosHito>
+            </hito>
         </hitos>
         <recomendacion>6</recomendacion>
     </ruta>

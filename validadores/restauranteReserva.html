@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+	<meta name="author" content="Lucas Martínez Rego">
+	<meta name="description" content="aquí cada documento debe tener la
+	descripción del contenido concreto del mismo">
+	<meta name="keywords" content="aquí cada documento debe tener la lista
+	de las palabras clave del mismo separadas por comas">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+	<link rel="stylesheet" type="text/css" href="../estilo/layout.css">
+	<link rel="stylesheet" type="text/css" href="../estilo/restaurante.css">
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="js/viajes.js"></script>
+    <title>Escritorio Virtual</title>
+	
+</head>
+
+<body>
+    <header>
+		<h1>Restaurante</h1>
+		<nav>
+			
+			 <a tabindex="1" accesskey="I" href="./index.html">Inicio</a>
+			 <a tabindex="2" accesskey="S" href="./sobremi.html">Sobre mi</a>
+			 <a tabindex="3" accesskey="A" href="./agenda.html">Agenda</a>
+			 <a tabindex="4" accesskey="J" href="./juegos.html">Juegos</a>
+			 <a tabindex="5" accesskey="V" href="./viajes.php">Viajes</a>
+			 <a tabindex="6" accesskey="M" href="./metereologia.html">Metereología</a>
+			 <a tabindex="7" accesskey="N" href="./noticias.html">Noticias</a>
+			 <a tabindex="8" accesskey="R" href="./restaurante.php">Restaurante</a>
+			
+		</nav>
+		</header>
+    <main>
+    <form action="#" method="post">
+        <input type="submit" value="Mostrar Carta" name="mostrarCarta">
+    </form>
+    
+    <section>
+        <h2>Conozca Nuestros Menús</h2>
+                        
+
+  </section>
+        <h2>Reserva en el Restaurante</h2>
+        <h3>Elige los datos que mejor se ajusten a sus necesidades</h3>
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required="">
+        <label for="tlf">Teléfono:</label>
+        <input type="tel" id="tlf" name="telefono" required="">
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo" required="">
+        <fieldset>
+            <legend>Escoge mesa:</legend>
+            <label for="1p">1 persona:</label>
+            <input type="radio" id="1p" name="capacidad" value="1" required=""> 
+            <label for="2p">2 personas:</label>
+            <input type="radio" id="2p" name="capacidad" value="2" required=""> 
+            <label for="4p">4 personas:</label>
+            <input type="radio" id="4p" name="capacidad" value="4" required=""> 
+            <label for="6p">6 personas:</label>
+            <input type="radio" id="6p" name="capacidad" value="6" required=""> 
+        </fieldset>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" min="2023-12-18" required="">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required="">
+        <input type="submit" value="Reservar" name="reservar">
+    </form>
+    <section><h2>Resumen de la Reserva</h2><p>¡Gracias por reservar en nuestro restaurante, A!</p><p>Nombre: A</p><p>Teléfono: A</p><p>Correo: A</p><p>Mesa para 4 personas</p><p>Fecha: 2023-12-28</p><p>Hora: 19:35</p></section>    
+        <h2>Estamos buscando gente !!</h2>
+        <h3>Completa el formulario si está interesado</h3>
+    <form action="#" method="post">
+        <label for="nombre2">Nombre:</label>
+        <input type="text" id="nombre2" name="nombre" required="">
+        <label for="tlf2">Teléfono:</label>
+        <input type="tel" id="tlf2" name="telefono" required="">
+        <label for="correo2">Correo:</label>
+        <input type="text" id="correo2" name="correo" required="">
+        <fieldset>
+            <legend>Puesto para el que postula:</legend>
+            <label for="camarero">Camarero:</label>
+            <input type="radio" id="camarero" name="puesto" value="Camarero" required=""> 
+            <label for="cocinero">Cocinero:</label>
+            <input type="radio" id="cocinero" name="puesto" value="Cocinero" required=""> 
+            <label for="media">Social Media:</label>
+            <input type="radio" id="media" name="puesto" value="Social Media" required=""> 
+        </fieldset>
+        <input type="submit" value="Enviar" name="empleo">
+    </form>
+    
+</main>
+    <section>
+        <h4>Cargar Reservas</h4>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="reservas">Cargar reservas: </label>
+            <input id="reservas" name="csv" type="file" accept=".csv">
+            <input type="submit" value="Presione para cargar el archivo" name="cargarReservasDesdeCSV">
+        </form>
+    </section>
+    <section>
+        <h4>Cargar Clientes</h4>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="cls">Cargar mesas: </label>
+            <input id="cls" name="csv" type="file" accept=".csv">
+            <input type="submit" value="Presione para cargar el archivo" name="cargarClientesDesdeCSV">
+        </form>
+    </section>
+    <section>
+        <h4>Cargar Menús</h4>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="menus">Cargar menús: </label>
+            <input id="menus" name="csv" type="file" accept=".csv">
+            <input type="submit" value="Presione para cargar el archivo" name="cargarMenusDesdeCSV">
+        </form>
+    </section>
+    <section>
+        <h4>Cargar Mesas</h4>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="mesas">Cargar mesas: </label>
+            <input id="mesas" name="csv" type="file" accept=".csv">
+            <input type="submit" value="Presione para cargar el archivo" name="cargarMesasDesdeCSV">
+        </form>
+    </section>
+    <section>
+        <h4>Cargar Empleados</h4>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="empls">Cargar empleados: </label>
+            <input id="empls" name="csv" type="file" accept=".csv">
+            <input type="submit" value="Presione para cargar el archivo" name="cargarEmpleadosDesdeCSV">
+        </form>
+    </section>
+    <form action="#" method="post">
+        <input type="submit" value="Exportar datos a CSV" name="exportarCSV">
+    </form>
+
+
+</body></html>

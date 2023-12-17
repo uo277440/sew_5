@@ -43,7 +43,7 @@ class Crucigrama{
     }
     paintMathword(){
         
-       var section = $("<section data-type='crucigrama'></section>")
+       var section = $("<section></section>")
        var h2 = $("<h2>Crucigrama</h2>")
        section.append(h2)
         for (var i = 0; i < this.filas; i++) {
@@ -63,7 +63,7 @@ class Crucigrama{
             
           }
         }
-        $('main').append(section)
+        $('section:eq(2)').before(section)
        // this.init_time = new Date();
     }
     click(){
@@ -104,7 +104,7 @@ class Crucigrama{
         var expression_row=true
         var expression_col=true
         var someclicked = $("p[data-state='clicked']")[0]
-        var parrafos = Array.from($('section[data-type="crucigrama"] p'))
+        var parrafos = Array.from($('section:eq(2) p'))
         var indice=parrafos.indexOf(someclicked)
         var i = parseInt(indice/9);
         var j = (indice)%9;
@@ -201,16 +201,16 @@ class Crucigrama{
     var formContent = `
         <form action='#' method='post' name='calculadora'>
             <label for='nombre'>Nombre:</label>
-            <input type='text' name='nombre' value='' required/>
+            <input type='text' id='nombre' name='nombre' value='' required/>
 
             <label for='apellidos'>Apellidos:</label>
-            <input type='text' name='apellidos' value='' required/>
+            <input type='text' name='apellidos' id='apellidos' value='' required/>
 
             <label for='nivel'>Nivel:</label>
-            <input type='text' name='nivel' readonly value='${this.nivel}'/>
+            <input type='text' name='nivel' id='nivel' readonly value='${this.nivel}'/>
 
             <label for='tiempo'>Tiempo(s):</label>
-            <input type='text' name='tiempo' readonly value='${this.tiempo}'/>
+            <input type='text' name='tiempo' id='tiempo' readonly value='${this.tiempo}'/>
 
             <input type='submit' value='Enviar' name="insertarRecord"/>
         </form>

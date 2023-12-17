@@ -1,36 +1,94 @@
+/*Especificidad: 011*/
 section:first-child{
     align-items: center;
     justify-content: space-around;
     
   }
+  /*Especificidad: 001*/
 section{
     align-items: center;
     justify-content: space-around;
-    
+
     
   }
+/*Especificidad: 001*/
+aside{
+    height: 60em;
+    width: 60em;
+
+    
+  }
+  /*Especificidad: 001*/
   article {
+    /* Hereda color de body estilo.css #000 */
     border: 0.0625em solid #ddd; 
     border-radius: 0.5em; 
     margin-bottom: 1.25em;
     padding: 1.25em; 
     background-color: #ffffff;
-    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); 
 }
 
-
+/*Especificidad: 002*/
 article ul {
     list-style: none;
     padding: 0;
 }
-
+/*Especificidad: 002*/
 article li {
     margin-bottom: 0.625em; 
 }
-
+/*Especificidad: 002*/
 article h3 {
     
     margin-top: 1.25em; 
 }
 
+
+/*Especificidad: 011*/
+article:nth-of-type(1){
+    width: 100%;
+    max-width: 100vh;
+    height: 70vh;
+    position: relative;
+    overflow: hidden; /* <===  */
+    border-radius: 1em;
+  }
   
+  /*Especificidad: 012*/
+  article:nth-of-type(1) img {
+    width: 100%;
+    max-width: 100vh;
+    height: 60vh;
+    position: absolute;
+    transition: all 0.5s;
+    object-fit: cover;
+    border-radius: 0.5em;
+  }
+  /*Especificidad: 011*/
+  button[data-action=prev],button[data-action=next] {
+    /* Hereda color de body estilo.css #000 */
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 1em;
+  }
+  /*Especificidad: 011*/
+  button:active {
+    transform: scale(1.1);
+  }
+  /*Especificidad: 011*/
+  button[data-action=prev] {
+    top: 50%;
+    left: 2%;
+  }
+  /*Especificidad: 011*/
+  button[data-action=next] {
+    top: 50%;
+    right: 2%;
+  }

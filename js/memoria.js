@@ -70,12 +70,10 @@ class Memoria{
             if(game.firstCard==null){
                 game.firstCard=this.lastChild.getAttribute('alt')
                 this.setAttribute("data-state","flip")
-                //this.classList.add('flip');
       
             }else{
                 game.secondCard=this.lastChild.getAttribute('alt')
                 this.setAttribute("data-state","flip")
-                //this.classList.add('flip');
                 setTimeout(() => {
                     game.checkForMatch();
                   }, "2000");
@@ -113,7 +111,6 @@ class Memoria{
         for (var i = 0; i < cards.length; i++) {
             cards[i].dataset.state = "default";
 
-          //  cards[i].classList.remove('flip');
 
           }
         this.resetBoard();
