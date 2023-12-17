@@ -93,8 +93,8 @@ input {
 }
 /*Especificidad: 011*/
 input[type="submit"] {
-    background-color: #4CAF50;
-    color: #FFF;
+    background-color: #6EFF72;
+    color: #000000;
     cursor: pointer;
 }
 /*Especificidad: 021*/
