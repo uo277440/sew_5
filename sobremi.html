@@ -21,23 +21,25 @@
 		<h1>Sobre mi</h1>
 		<nav>
 			
-			 <a tabindex="1" accesskey="I" href="index.html">Home</a>
-			 <a tabindex="2" href="sobremi.html">Current Events</a>
-			 <a tabindex="3" href="agenda.html">Agenda</a>
-			 <a tabindex="4" href="juegos.html">Juegos</a>
-			 <a tabindex="5" href="viajes.html">Viajes</a>
-			 <a tabindex="6" href="metereologia.html">Metereología</a>
-			 <a tabindex="7" href="noticias.html">Noticias</a>
-			
-		</nav>
+			<a tabindex="1" accesskey="I" href="index.html">Inicio</a>
+			<a tabindex="2" accesskey="S" href="sobremi.html">Sobre mi</a>
+			<a tabindex="3" accesskey="A" href="agenda.html">Agenda</a>
+			<a tabindex="4" accesskey="J" href="juegos.html">Juegos</a>
+			<a tabindex="5" accesskey="V" href="viajes.php">Viajes</a>
+			<a tabindex="6" accesskey="M" href="metereologia.html">Metereología</a>
+			<a tabindex="7" accesskey="N" href="noticias.html">Noticias</a>
+			<a tabindex="8" accesskey="R" href="restaurante.php">Restaurante</a>
+		   
+	   </nav>
 		</header>
+	<main>
 	<section>
 		<h2>Información personal</h2>
 		<picture>
 			<source media="(max-width: 465px)" srcset="multimedia/yo.jpg">
 			<source media="(max-width:799px)" srcset="multimedia/yo_2.jpg">
 			<source media="(min-width:800px)" srcset="multimedia/yo_3.jpg">
-			<img src='multimedia/yo.jpg' alt="No me puedo mostrar" />
+			<img src='multimedia/yo.jpg' alt="Imágen sobre mi" />
 		</picture>
 		<p>Nombre: Lucas</p>
 		<p>Apellidos: Martínez Rego</p>
@@ -49,7 +51,10 @@
 	<section>
 		<h2>Aficciones</h2>
 		<p>A continuación una lista no ordenada con mis afciciones principales</p>
-		<audio src="Multimedia/zelda.wav" controls></audio>
+		<audio controls>
+			<source src="Multimedia/zelda.wav" type="audio/wav"/>
+			<source src="Multimedia/zelda.mp3" type="audio/mp3"/>
+		</audio>
 		<ul>
 			<li>Música</li>
 			<li>Jugar videojuegos</li>
@@ -58,8 +63,12 @@
 			<li>Escalada</li>
 		</ul>
 		<h2>Cantantes/Grupos favoritos </h2>
+		
 		<p>Está lista estará ordenada</p>
-		<audio src="Multimedia/musica.mp3" controls></audio>
+		<audio controls>
+			<source src="Multimedia/musica.wav" type="audio/wav"/>
+			<source src="Multimedia/musica.mp3" type="audio/mp3"/>
+		</audio>
 		<ol>
 			<li>Quevedo</li>
 			<li>Mora</li>
@@ -67,13 +76,10 @@
 			<li>Feid</li>
 			<li>Karol G</li>
 		</ol>
-		<p>Unos videos para demostrar mi aficción a los videojuegos</p>
+		<p>Un video para demostrar mi afición a los videojuegos</p>
 		<video controls>
-			<source src="multimedia/fortnite.webm" type="video/webm">
-			<source src="multimedia/fortnite.mp4" type="video/mp4">
-		</video>
-		<video controls>
-			<source src="multimedia/csgo.mp4" type="video/mp4">
+			<source src="multimedia/fortnite.mp4" type="video/mp4"/>
+			<source src="multimedia/fortnite.webm" type="video/webm"/>
 		</video>
 	</section>
 	<section>
@@ -121,9 +127,9 @@
 				</ul>
 			</li>
 		</ul>
-		<img src='multimedia/c_lenguaje.jpg' alt="3" />
-		<img src='multimedia/java_lenguaje.png' alt="4"/>
-		<img src='multimedia/swift_lenguaje.jpg' alt="5"/>
+		<img src='multimedia/c_lenguaje.png' alt="Imágen lenguaje C" />
+		<img src='multimedia/java_lenguaje.png' alt="Imágen lenguaje Java"/>
+		<img src='multimedia/swift_lenguaje.png' alt="Imágen lenguaje Swift"/>
 	</section>
 			
 	
@@ -158,5 +164,6 @@
 			</tr>
 		</table>
 	</aside>
+</main>
 </body> 
 </html>
