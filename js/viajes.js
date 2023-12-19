@@ -266,14 +266,24 @@ class Viajes{
                 $article.append(`<h2>${$ruta.attr('nombre')}</h2>`);
                 $article.append(`<p>Descripción de la ruta: ${$ruta.attr('descripcion')}</p>`);
                 $article.append(`<p>Duración de la ruta: ${$ruta.attr('duracion')}</p>`);
-                $article.append(`<p>Personas adecuadas: ${$ruta.attr('personasAdecuadas')}</p>`);
-                $article.append(`<p>Medio de transporte: ${$ruta.attr('medioTransporte')}</p>`);
+               
 
                 const $ul = $('<ul>');
+                $ul.append(`<li>Personas adecuadas: ${$ruta.find('personasAdecuadas')}</li>`);
+                $ul.append(`<li>Medio de transporte: ${$ruta.find('medioTransporte')}</li>`);
                 $ul.append(`<li>Tipo de Ruta: ${$ruta.find('tipoRuta').text()}</li>`);
                 $ul.append(`<li>Medio de Transporte: ${$ruta.find('medioTransporte').text()}</li>`);
                 $ul.append(`<li>Fecha de Inicio: ${$ruta.find('fechaInicio').text()}</li>`);
                 $ul.append(`<li>Hora de Inicio: ${$ruta.find('horaInicio').text()}</li>`);
+                const $referencia = $ruta.find('referencia');
+                if ($referencia.length > 0) {
+                    $referencia.each(function() {
+                        const $referencia = $(this);
+                        const hrefValue = $referencia.text();
+                        const $enlace = $(`<li><a href="${hrefValue}">Referencia</a></li>`);
+                        $ul.append($enlace);
+                    });
+                }
                 $article.append($ul);
 
                 const $coordenadas = $ruta.find('coordenadasInicio');
@@ -281,9 +291,7 @@ class Viajes{
                 $article.append(`<p>Longitud: ${$coordenadas.find('longitud').text()}</p>`);
                 $article.append(`<p>Latitud: ${$coordenadas.find('latitud').text()}</p>`);
                 $article.append(`<p>Altitud: ${$coordenadas.find('altitud').text()}m</p>`);
-                
 
-                
                 const $hitos = $ruta.find('hito');
                 $article.append('<h3>Hitos</h3>');
                 const $ulHitos = $('<ul>');

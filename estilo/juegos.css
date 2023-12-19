@@ -25,9 +25,5 @@ section:nth-of-type(1) {
     background-color: #fff;
     border-radius: 0.5em;
     padding: 1.25em;
-}
-/*Especificidad: 002*/
-nav menu {
-    /*Redeficinión de list-style*/
-    list-style: none;
+
 }
