@@ -1,0 +1,93 @@
+/*Especificidad: 001*/
+body {
+  background-color:#DED9CD;
+  font-family: 'Segoe UI',Helvetica, Tahoma, Verdana, sans-serif;
+  font-size:medium;
+  color: #000;
+  }
+/*Especificidad: 002*/
+table th{
+  /* Hereda background-color de body #DED9CD */
+    border: 0.2em solid;
+    color:#000;
+    
+  }
+  /*Especificidad: 002*/
+  table td{
+    /* Hereda background-color de body #DED9CD */
+    border: 0.2em solid;
+    border-color: #000000;
+    color:#000000;
+  }
+/*Especificidad: 001*/ 
+table{
+  /* Hereda background-color de body #DED9CD */
+    border: 0.2em solid;
+    color:#000;
+    border-collapse: collapse;
+}
+
+/*Especificidad: 001*/
+h1 {
+  /* Hereda background-color de body #DED9CD */
+  font-family: 'Segoe UI',Helvetica, Tahoma,Verdana, sans-serif;
+  color: #2c5545;    
+  text-transform: uppercase;
+  padding: 2em; 
+  text-align: center;     
+  font-size: xx-large;
+  }
+  /*Especificidad: 001*/
+  h2{
+    /* Hereda background-color de body #DED9CD */
+    font-family: 'Segoe UI',Helvetica, Tahoma, Verdana, sans-serif;
+    font-size: x-large;
+    color: #2c5545;   
+  }
+  /*Especificidad: 001*/
+  p{
+    /* Hereda background-color de body #DED9CD */
+    color: #000; 
+  }
+/*Especificidad: 001*/
+a{
+  /* Hereda background-color de body #DED9CD */
+  color:#000000;
+}
+/*Especificidad: 011*/
+a:visited{
+  /* Hereda color de a #000000 */
+  color:#370a3d;
+}
+/*Especificidad: 011*/
+a:hover{
+  /* Hereda background-color de body #DED9CD */
+  color:#551212;
+}
+/*Especificidad: 011*/
+a:active{
+  /* Hereda color de a #000000 */
+  background-color:#DED9CD;
+}
+/*Especificidad: 014*/
+ul > li:nth-child(3) ul li {
+  /* Hereda background-color de body #DED9CD */
+  color: #1C4203;
+}
+/*Especificidad: 002*/
+li ul{
+  list-style-image:url(../multimedia/videogame.svg)
+}
+
+/*Especificidad: 001*/
+li,
+p {
+  line-height: 1.5em;
+}
+/*Especificidad: 001*/
+video {
+  max-width: 100%;
+  height: auto;
+  }
+
+

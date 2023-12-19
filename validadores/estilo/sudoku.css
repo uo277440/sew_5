@@ -1,0 +1,62 @@
+/*Especificidad: 001*/
+main {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 0; /* Márgenes entre celdas */
+    margin:auto;
+    width: 500px;
+    height: 500px;
+    text-align: center
+  }
+  /*Especificidad: 011*/
+  p[data-state='clicked']{
+     /* Hereda color de body estilo.css #000 */
+    background-color: #B3D8CC;
+  }
+  /*Especificidad: 011*/
+  p[data-state='blocked']{
+     /* Hereda color de body estilo.css #000 */
+    background-color: #D7DBDA;
+  }
+  /*Especificidad: 001*/
+  p {
+    border: 0.0625em solid #5f5a5a;
+    margin: 0;
+  }
+  /*Especificidad: 011*/
+  p:nth-child(3n){
+    border-right: 0.2em solid black;
+  }
+  
+/*Especificidad: 011*/
+p:nth-child(9n + 1) {
+  border-left: 0.2em solid black; 
+}
+
+/*Especificidad: 021*/
+p:nth-child(n):nth-child(-n + 9) {
+  /* Redefinición de border-top */
+  border-top: 0.2em solid black;
+}
+/*Especificidad: 021*/
+p:nth-child(n + 28):nth-child(-n + 36) {
+  /* Redefinición de border-top */
+  border-top: 0.2em solid black;
+}
+/*Especificidad: 021*/
+p:nth-child(n + 55):nth-child(-n + 63) {
+  /* Redefinición de border-top */
+  border-top: 0.2em solid black;
+}
+/*Especificidad: 021*/
+p:nth-child(n + 28):nth-child(-n + 36) {
+  /* Redefinición de border-top */
+  border-top: 0.2em solid black;
+}
+/*Especificidad: 021*/
+p:nth-child(n + 73):nth-child(-n + 81) {
+  border-bottom: 0.2em solid black;
+}
+
+

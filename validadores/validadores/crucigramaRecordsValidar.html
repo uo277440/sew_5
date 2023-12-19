@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+	<meta name="author" content="Lucas Martínez Rego">
+	<meta name="description" content="aquí cada documento debe tener la
+	descripción del contenido concreto del mismo">
+	<meta name="keywords" content="aquí cada documento debe tener la lista
+	de las palabras clave del mismo separadas por comas">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css">
+    <link rel="stylesheet" type="text/css" href="../estilo/juegos.css">
+	<link rel="stylesheet" type="text/css" href="../estilo/crucigrama.css">
+	<script src="../js/crucigrama.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <title>Escritorio Virtual</title>
+	
+</head>
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>
+		<h1>Crucigrama</h1>
+		<nav>
+			
+			 <a tabindex="1" accesskey="I" href="./index.html">Inicio</a>
+			 <a tabindex="2" accesskey="S" href="./sobremi.html">Sobre mi</a>
+			 <a tabindex="3" accesskey="A" href="./agenda.html">Agenda</a>
+			 <a tabindex="4" accesskey="J" href="./juegos.html">Juegos</a>
+			 <a tabindex="5" accesskey="V" href="./viajes.php">Viajes</a>
+			 <a tabindex="6" accesskey="M" href="./metereologia.html">Metereología</a>
+			 <a tabindex="7" accesskey="N" href="./noticias.html">Noticias</a>
+			 <a tabindex="8" accesskey="R" href="./restaurante.php">Restaurante</a>
+			
+		</nav>
+		</header>
+        <section>
+			<h2>Juegos disponibles</h2>
+				<nav>
+					<menu>
+                    <li><a href="./sudoku.html">Sudoku</a></li>
+                    <li><a href="./memoria.html">Memoria</a></li>
+                    <li><a href="./api.html">ApiGame</a></li>
+					</menu>
+				</nav>
+			</section>
+    <main>
+        <section>
+            <h2>Instrucciones</h2>
+            <p>Se deben completar los huecos en blanco utilizando números del 1-9 y los operadores matemáticos básicos *(multiplicar) /(dividir) +(sumar) -(restar)</p>
+        </section>
+		<section><h2>Crucigrama</h2><p data-state="blocked">4</p><p data-state="blocked">*</p><p data-state="default"></p><p data-state="blocked">=</p><p data-state="blocked">12</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">5</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">*</p><p data-state="empty"></p><p data-state="blocked">/</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">*</p><p data-state="blocked">4</p><p data-state="blocked">-</p><p data-state="default"></p><p data-state="blocked">=</p><p data-state="default"></p><p data-state="empty"></p><p data-state="blocked">15</p><p data-state="empty"></p><p data-state="default"></p><p data-state="blocked">*</p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="blocked">/</p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="default"></p><p data-state="empty"></p><p data-state="blocked">3</p><p data-state="empty"></p><p data-state="blocked">4</p><p data-state="blocked">*</p><p data-state="default"></p><p data-state="blocked">=</p><p data-state="blocked">20</p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">8</p><p data-state="empty"></p><p data-state="blocked">9</p><p data-state="blocked">-</p><p data-state="default"></p><p data-state="blocked">=</p><p data-state="blocked">3</p><p data-state="empty"></p><p data-state="default"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">-</p><p data-state="empty"></p><p data-state="blocked">+</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">*</p><p data-state="blocked">6</p><p data-state="blocked">/</p><p data-state="default"></p><p data-state="blocked">=</p><p data-state="default"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="default"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">=</p><p data-state="empty"></p><p data-state="empty"></p><p data-state="blocked">6</p><p data-state="empty"></p><p data-state="blocked">8</p><p data-state="blocked">*</p><p data-state="default"></p><p data-state="blocked">=</p><p data-state="blocked">16</p></section><section data-type="botonera">
+			<h2>Botonera</h2>
+			<button onclick="crucigrama.introduceElement(1)">1</button>
+			<button onclick="crucigrama.introduceElement(2)">2</button>
+			<button onclick="crucigrama.introduceElement(3)">3</button>
+			<button onclick="crucigrama.introduceElement(4)">4</button>
+			<button onclick="crucigrama.introduceElement(5)">5</button>
+			<button onclick="crucigrama.introduceElement(6)">6</button>
+			<button onclick="crucigrama.introduceElement(7)">7</button>
+			<button onclick="crucigrama.introduceElement(8)">8</button>
+			<button onclick="crucigrama.introduceElement(9)">9</button>
+			<button onclick="crucigrama.introduceElement('*')">*</button>
+			<button onclick="crucigrama.introduceElement('+')">+</button>
+			<button onclick="crucigrama.introduceElement('-')">-</button>
+			<button onclick="crucigrama.introduceElement('/')">/</button>
+		</section>
+        <section><h2>Top 10 Mejores Récords</h2><ol><li><strong>Lucas Martínez</strong> - Tiempo: 8</li><li><strong>a a</strong> - Tiempo: 8</li><li><strong>a a</strong> - Tiempo: 9</li></ol></section>		
+    </main>
+
+
+
+
+</body></html>

@@ -1,0 +1,48 @@
+
+
+/*Especificidad: 001*/
+header {
+  /* Hereda color de body estilo.css #000 */
+    border-style:inset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #D1F0D7;
+    color:#000;
+  }
+
+/*Especificidad: 002*/  
+nav a {
+  /* Hereda background-color de header #d6d6d6 */
+  color: #000000;
+  padding: 1em;
+  
+}
+  
+@media (max-width: 768px) {
+  /*Especificidad: 002*/  
+    nav a {
+        flex-direction: column;
+         /*Redefinición de padding*/  
+        padding: 1em;
+    }
+}
+
+
+@media (max-width: 480px) {
+  /*Especificidad: 001*/  
+    header {
+        flex-direction: column;
+        padding: 1em;
+    } 
+
+}
+
+
+
+
+
+
+
+

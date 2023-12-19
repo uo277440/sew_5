@@ -1,0 +1,46 @@
+/*Especificidad: 012*/
+body > section:nth-of-type(2){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+  }
+  /*Especificidad: 001*/
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 0.625em;
+    
+  }
+  
+
+  /*Especificidad: 001*/
+  figure {
+    width: calc(30% - 4em); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2em solid #000; 
+    padding-right: 1em;
+    padding-bottom: 6em;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    /*Redefinición de transition*/
+    transition: transform .5s;
+    cursor: move;
+    height: 15em;
+    margin: 2em;
+  }
+  /*Especificidad: 002*/
+  figure > img{
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+/*Especificidad: 011*/
+  figure:hover {
+    transform: scale(1.05); 
+  }

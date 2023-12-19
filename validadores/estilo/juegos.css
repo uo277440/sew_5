@@ -1,0 +1,33 @@
+/*Especificidad: 002*/
+nav menu {
+    list-style: none;
+}
+/*Especificidad: 003*/
+nav menu a {
+    display: block;
+    padding: 0.625em;
+    text-decoration: none;
+    color: #0611FF;
+    background-color: #fff;
+    border-bottom: 0.0625em solid #ddd;
+    
+}
+/*Especificidad: 013*/
+nav menu a:hover {
+    /*Hereda color de estilo.css a:hover #551212*/
+    background-color: #f0f0f0;
+}
+/*Especificidad: 011*/
+section:nth-of-type(1) {
+    /*Hereda color de body estilo.css #000*/
+    max-width: 40em;
+    margin: 1.25em auto;
+    background-color: #fff;
+    border-radius: 0.5em;
+    padding: 1.25em;
+}
+/*Especificidad: 002*/
+nav menu {
+    /*Redeficinión de list-style*/
+    list-style: none;
+}
