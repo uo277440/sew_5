@@ -3,10 +3,8 @@
 <html lang="es">
 <head>
 	<meta name ="author" content ="Lucas Martínez Rego" />
-	<meta name ="description" content ="aquí cada documento debe tener la
-	descripción del contenido concreto del mismo" />
-	<meta name ="keywords" content ="aquí cada documento debe tener la lista
-	de las palabras clave del mismo separadas por comas" />
+	<meta name ="description" content ="Carga y subida de noticias" />
+	<meta name ="keywords" content ="noticia,entradilla,autor" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
@@ -36,22 +34,24 @@
 		   
 	   </nav>
 		</header>
+		<main>
+			<label for="noticias">Cargar Noticias:</label>
+			<input id="noticias" type="file" onchange="noticia.readInputFile(this)"/>
+			<section>
+				<h2>Añadir Noticia</h2>
+				<label for="titular">Titular:</label>
+				<input type="text" id="titular" />
+				<label for="entradilla">Entradilla:</label>
+				<input type="text" id="entradilla" />
+				<label for="texto">Texto:</label>
+				<input type="text" id="texto" />
+				<label for="autor">Autor:</label>
+				<input type="text" id="autor" />
+				<button onclick="noticia.addNoticia()">Añadir Noticia</button>
+			</section>
+	</main>
 		<script>
 			var noticia = new Noticias()
 		</script>
-		<label for="noticias">Cargar Noticias:</label>
-		<input id="noticias" type="file" onchange="noticia.readInputFile(this)"/>
-		<section>
-			<h2>Añadir Noticia</h2>
-  			<label for="titular">Titular:</label>
-  			<input type="text" id="titular" />
-  			<label for="entradilla">Entradilla:</label>
-			<input type="text" id="entradilla" />
-			<label for="texto">Texto:</label>
-  			<input type="text" id="texto" />
-  			<label for="autor">Autor:</label>
-			<input type="text" id="autor" />
-			<button onclick="noticia.addNoticia()">Añadir Noticia</button>
-		</section>
 </body>
 </html>

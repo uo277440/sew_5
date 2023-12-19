@@ -3,8 +3,8 @@
 <html lang="es">
 	<head>
 		<meta name ="author" content ="Lucas Martínez Rego" />
-		<meta name ="description" content ="página sobre mi y mis aficiones" />
-		<meta name ="keywords" content ="afición tiempo álgebra" />
+		<meta name ="description" content ="Información sobre la metereología en Kenia" />
+		<meta name ="keywords" content ="humedad,tiempo" />
 		<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 		<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
@@ -37,6 +37,7 @@
 		   
 	   </nav>
 		</header>
+	<main>
 	<section>
 		<h2>Información del país</h2>
 		<script>
@@ -48,9 +49,12 @@
 			document.write(pais.getReligionMayoritaria());
 			document.write(pais.secundariosHTML());
 			pais.escribirCoordenadas();
-			pais.actualizarPronostico();
 		</script>
 	</section>
+</main>
+<script>
+	pais.actualizarPronostico();
+</script>
 </body>
 
 </html>
