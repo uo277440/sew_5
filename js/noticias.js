@@ -8,7 +8,7 @@ class Noticias{
             else document.write("<p>¡¡¡ Este navegador NO soporta el API File y este programa puede no funcionar correctamente !!!</p>");
     }
     readInputFile(fileInput) {
-        const contenedor = document.querySelector('body')
+        const contenedor = document.querySelector('main')
         
         const file = fileInput.files[0];
         //var secciones =['Titular', 'Entradilla', 'Texto',
@@ -45,7 +45,7 @@ class Noticias{
       addNoticia() {
         const camposTexto = document.querySelectorAll('input[type="text"]');
         const valores = Array.from(camposTexto).map(input => input.value);
-        var body= document.querySelector('body')
+        var main= document.querySelector('main')
         if (valores.every(Boolean)) {
           var section = document.createElement('section')
           var h2 = document.createElement('h2')
@@ -56,7 +56,7 @@ class Noticias{
             p.textContent=valores[i]
             section.appendChild(p)
           }
-          body.append(section)
+          main.append(section)
           camposTexto.forEach(input => input.value = '')
         } else {
           alert('Por favor, completa todos los campos para agregar la noticia.');

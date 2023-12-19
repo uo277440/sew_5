@@ -53,7 +53,7 @@ class Pais {
         })
         .done(function (data) {
             const pronostico = data.list;
-            const contenedor = $('body');
+            const contenedor = $('main');
         
             const tabla = $("<table></table>");
             const caption=$("<caption>Pronósticos próximos 5 días</caption>")
@@ -75,16 +75,16 @@ class Pais {
                 const tempMinKelvin = dia.main.temp_min;
                 const tempMaxGrados = tempMaxKelvin - 273.15;
                 const tempMinGrados = tempMinKelvin - 273.15;
-                fila.append(`<td>${dia.dt_txt.split(" ")[0]}</td>`);
-                fila.append(`<td>${tempMaxGrados.toFixed(1)}</td>`);
-                fila.append(`<td>${tempMinGrados.toFixed(1)}</td>`);
-                fila.append(`<td>${dia.main.humidity}</td>`);
-                fila.append(`<td>${dia.rain ? dia.rain['3h'] : 0}</td>`);
+                fila.append(`<td headers='fechas'>${dia.dt_txt.split(" ")[0]}</td>`);
+                fila.append(`<td headers='tmax'>${tempMaxGrados.toFixed(1)}</td>`);
+                fila.append(`<td headers='tmin'>${tempMinGrados.toFixed(1)}</td>`);
+                fila.append(`<td headers='humedad'>${dia.main.humidity}</td>`);
+                fila.append(`<td headers='lluvia'>${dia.rain ? dia.rain['3h'] : 0}</td>`);
         
                 
                 const iconoTiempo = $("<img>");
                 iconoTiempo.attr({"src": `https://openweathermap.org/img/wn/${dia.weather[0].icon}.png`,"alt": `${dia.weather[0].description}`});
-                const celdaIcono = $("<td></td>").append(iconoTiempo);
+                const celdaIcono = $("<td headers='icono'></td>").append(iconoTiempo);
                 fila.append(celdaIcono);
         
                 tabla.append(fila);

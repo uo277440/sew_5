@@ -17,8 +17,8 @@ nav menu a:hover {
     /*Hereda color de estilo.css a:hover #551212*/
     background-color: #f0f0f0;
 }
-/*Especificidad: 011*/
-section:nth-of-type(1) {
+/*Especificidad: 012*/
+body > section:nth-of-type(1) {
     /*Hereda color de body estilo.css #000*/
     max-width: 40em;
     margin: 1.25em auto;

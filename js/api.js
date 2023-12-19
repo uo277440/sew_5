@@ -21,6 +21,7 @@ class Api {
     }
 
     dibujarTablero() {
+        var main = document.createElement('main')
         var section = document.createElement('section')
         var h2 = document.createElement('h2')
         h2.textContent='¡ Aprende los sonidos de los animales !'
@@ -51,8 +52,8 @@ class Api {
             figure.addEventListener("drop", (e) => this.handleDrop(e, figure));
             section.appendChild(figure);
         }
-
-        body.append(section)
+        main.append(section)
+        body.append(main)
  
     }
     iniciarAudioContext() {

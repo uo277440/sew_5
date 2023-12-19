@@ -22,7 +22,7 @@ class Agenda{
     
             var races = $('Race',data)
             const tabla = $('<table></table>');
-            const encabezado = `
+            var contenido = `
               <caption>Datos del circuito actual</caption>
                 <tr>
                   <th scope='col' id='nombre'>Nombre de la Carrera</th>
@@ -32,9 +32,9 @@ class Agenda{
                   <th scope='col' id='hora'>Hora</th>
                 </tr>
             `;
-            tabla.append(encabezado);
-    
-            const cuerpoTabla = $('<tbody>');
+            
+            
+            
            
             for (var i = 0; i < races.length; i++) {
                 // Accede al elemento actual en la colección
@@ -47,21 +47,20 @@ class Agenda{
                 var hora = $(carrera).find('Time').first().text().replace("Z", "");
                 
                 
-                var fila = `
+                contenido += `
                 <tr>
-                    <td>${nombreCarrera}</td>
-                    <td>${nombreCircuito}</td>
-                    <td>${latitudCircuito} N ${longitudCircuito} E</td>
-                    <td>${fechaCarrera}</td>
-                    <td>${hora}</td>
+                    <td headers='nombre'>${nombreCarrera}</td>
+                    <td headers='circuito'>${nombreCircuito}</td>
+                    <td headers='coordenadas'>${latitudCircuito} N ${longitudCircuito} E</td>
+                    <td headers='fecha'>${fechaCarrera}</td>
+                    <td headers='hora'>${hora}</td>
                 </tr>
                 `;
             
                 
-                tabla.append(fila);
+                
             }
-    
-            tabla.append(cuerpoTabla);
+            tabla.append(contenido);
             contenedor.append(tabla);
           },
           error: (error) => {

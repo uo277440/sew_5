@@ -1,0 +1,4 @@
+id_empleado,nombre,cargo,salario
+1,Carlos,Chef,50000.00
+2,Ana,"Sous Chef",45000.00
+3,Miguel,Cocinero,40000.00

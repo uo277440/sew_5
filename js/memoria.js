@@ -138,6 +138,7 @@ class Memoria{
     }
     // Método para crear nodos article en el documento HTML
     createElements() {
+        var main = document.createElement('main')
         var section = document.createElement('section')
         var body = document.querySelector('body');
         var titulo = document.createElement('h2')
@@ -165,7 +166,8 @@ class Memoria{
 
             
     }
-    body.append(section)
+    main.append(section)
+    body.append(main)
 }
 
 
