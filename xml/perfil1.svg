@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+        <title>Ruta Safari en Maasai Mara</title>
+        <rect width="100%" height="100%" fill="#F0F0F0" />
+        <polyline points="20,250 20,154.20000000000002 102.0,153.9 162.0,159.5 381.0,142.0 381.0,250 20,250 " fill="none" stroke="red" stroke-width="2" />
+        <text x="20" y="265" style="writing-mode: tb; glyph-orientation-vertical: 0;">Inicio</text>
+<text x="102.0" y="265" style="writing-mode: tb; glyph-orientation-vertical: 0;">Colina Oloololo</text>
+<text x="162.0" y="265" style="writing-mode: tb; glyph-orientation-vertical: 0;">Rio Mara</text>
+<text x="381.0" y="265" style="writing-mode: tb; glyph-orientation-vertical: 0;">Gran Migracion</text>
+
+    </svg>

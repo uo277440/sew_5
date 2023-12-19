@@ -2,9 +2,9 @@
 <rutas xmlns="http://tempuri.org/rutas"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
-    <ruta nombre="Ruta Safari en Maasai Mara" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Una emocionante ruta de safari en la Reserva Nacional de Maasai Mara." agencia="agencia" duracion="P1Y7M29DT12H">
+    <ruta nombre="Ruta Safari en Maasai Mara" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Una emocionante ruta de safari en la Reserva Nacional de Maasai Mara." agencia="agencia" duracion="P0Y0M0DT9H">
         <tipoRuta>Silvestre</tipoRuta>
-        <medioTransporte>Coche</medioTransporte>
+        <medioTransporte>Todoterreno</medioTransporte>
         <fechaInicio>2018-10-20</fechaInicio>
         <horaInicio>12:30:00</horaInicio>
         <personasAdecuadas>Amantes de la naturaleza y la vida silvestre</personasAdecuadas>
@@ -27,7 +27,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">82</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/oloololo.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/oloololo.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -40,7 +40,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">60</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/rio_mara.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/rio_mara.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -53,7 +53,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">219</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/gran_migracion.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/gran_migracion.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -63,9 +63,9 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
         </hitos>
         <recomendacion>6</recomendacion>
     </ruta>
-    <ruta nombre="Ruta en el Bosque Aberdare" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Una caminata serena a través del bosque Aberdare." agencia="agencia" duracion="P1Y7M29DT12H">
+    <ruta nombre="Ruta en el Bosque Aberdare" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Una caminata serena a través del bosque Aberdare." agencia="agencia" duracion="P0Y0M0DT3H">
         <tipoRuta>Silvestre</tipoRuta>
-        <medioTransporte>A pie</medioTransporte>
+        <medioTransporte>Todoterreno</medioTransporte>
         <fechaInicio>2018-10-20</fechaInicio>
         <horaInicio>12:30:00</horaInicio>
         <personasAdecuadas>Aficionados a la caminata y la observación de aves</personasAdecuadas>
@@ -88,7 +88,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">140</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/pesca.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/pesca.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -101,7 +101,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">85</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/arbol.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/arbol.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -114,7 +114,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">110</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/karuru.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/karuru.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -122,7 +122,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
         </hitos>
         <recomendacion>6</recomendacion>
     </ruta>
-    <ruta nombre="Ruta en Bicicleta por el Lago Naivasha" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Un recorrido escénico en bicicleta alrededor del hermoso lago Naivasha." agencia="agencia" duracion="P1Y7M29DT12H">
+    <ruta nombre="Ruta en Bicicleta por el Lago Naivasha" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Un recorrido escénico en bicicleta alrededor del hermoso lago Naivasha." agencia="agencia" duracion="P0Y0M0DT13H">
         <tipoRuta>Silvestre</tipoRuta>
         <medioTransporte>Coche</medioTransporte>
         <fechaInicio>2018-10-20</fechaInicio>
@@ -147,7 +147,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">45</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/isla.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/isla.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -160,7 +160,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">95</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/torre.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/torre.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>
@@ -173,7 +173,7 @@ xsi:schemaLocation="http://tempuri.org/rutas ./rutas.xsd">
                 </coordenadas>
                 <distanciaAnterior unidad="km">80</distanciaAnterior>
                 <fotoHitos>
-                    <fotoHito>./multimedia/fotosRutas/parque.jpg</fotoHito>
+                    <fotoHito>../xml/fotosRutas/parque.jpg</fotoHito>
                 </fotoHitos>
                 <videosHito>
                 </videosHito>

@@ -1,32 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rutas SYSTEM "rutas.dtd">
 <rutas>
-    <ruta nombre="a" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="descripcion" agencia="agencia" duracion="dura">
-        <tipoRuta>Silvestre</tipoRuta>
-        <medioTransporte>Coche</medioTransporte>
-        <fechaInicio>12/12/12</fechaInicio>
-        <horaInicio>12:00</horaInicio>
-        <personasAdecuadas>No niños</personasAdecuadas>
-        <coordenadasInicio>1;38</coordenadasInicio>
-        <referencias>
-            <referencia>Una referencia</referencia>
-            <referencia>Otra referencia</referencia>
-        </referencias>
-        <hitos>
-            <hito nombre="super hito" descripcion="un hito interesante">
-                <coordenadas>1;38</coordenadas>
-                <distanciaAnterior>4km</distanciaAnterior>
-                <fotoHitos>
-                    <fotoHito>una foto</fotoHito>
-                    <fotoHito>otra foto</fotoHito>
-                </fotoHitos>
-                <videosHito>
-                    <videoHito>Un video</videoHito>
-                    <videoHito>Otro video</videoHito>
-                </videosHito>
-            </hito>
-           
-        </hitos>
-        <recomendacion>6</recomendacion>
-    </ruta>
+<ruta nombre="Ruta Safari en Maasai Mara" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Una emocionante ruta de safari en la Reserva Nacional de Maasai Mara." agencia="agencia" duracion="P1Y7M29DT12H">
+    <tipoRuta>Silvestre</tipoRuta>
+    <medioTransporte>Coche</medioTransporte>
+    <fechaInicio>2018-10-20</fechaInicio>
+    <horaInicio>12:30:00</horaInicio>
+    <personasAdecuadas>Amantes de la naturaleza y la vida silvestre</personasAdecuadas>
+    <coordenadasInicio>35.091013,-1.407593</coordenadasInicio>
+    <referencias>
+        <referencia>https://es.wikipedia.org/wiki/Mas%C3%A1i_Mara</referencia>
+        <referencia>https://www.rhinoafrica.com/es/destinos/reserva-nacional-masai-mara/21753</referencia>
+        <referencia>https://www.aventuraafrica.com/paises/kenia/destinos/masai-mara</referencia>
+    </referencias>
+    <hitos>
+        <hito nombre="Colina Oloololo" descripcion="Punto panorámico que brinda vistas impresionantes de la Reserva Nacional de Maasai Mara, ideal para apreciar la extensión de la fauna y la belleza natural">
+            <coordenadas>35.095244;-1.439476</coordenadas>
+            <distanciaAnterior>82</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/oloololo.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        <hito nombre="Rio Mara" descripcion="Importante curso de agua que añade dramatismo a la Gran Migración y ofrece escenarios pintorescos para la observación de vida silvestre.">
+            <coordenadas>35.232635;-1.510389</coordenadas>
+            <distanciaAnterior>60</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/rio_mara.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        <hito nombre="Gran Migracion" descripcion="Espectáculo único donde millones de ñus y cebras migran en busca de pastos frescos en la Reserva Nacional de Maasai Mara">
+            <coordenadas>35.37897;-1.41332</coordenadas>
+            <distanciaAnterior>219</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/gran_migracion.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        
+       
+    </hitos>
+    <recomendacion>6</recomendacion>
+</ruta>
+<ruta nombre="Ruta en el Bosque Aberdare" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Una caminata serena a través del bosque Aberdare." agencia="agencia" duracion="P1Y7M29DT12H">
+    <tipoRuta>Silvestre</tipoRuta>
+    <medioTransporte>A pie</medioTransporte>
+    <fechaInicio>2018-10-20</fechaInicio>
+    <horaInicio>12:30:00</horaInicio>
+    <personasAdecuadas>Aficionados a la caminata y la observación de aves</personasAdecuadas>
+    <coordenadasInicio>36.451683;0.566818</coordenadasInicio>
+    <referencias>
+        <referencia>https://www.alltrails.com/es/wales/rhondda-cynon-taf/aberdare/forest</referencia>
+        <referencia>https://samakisafaris.com/parque-nacional-aberdare</referencia>
+        <referencia>https://udare.es/parque-nacional-aberdare-en-kenia/</referencia>
+    </referencias>
+    <hitos>
+        <hito nombre="Refugio de Pesca de Treetops" descripcion="Punto de interés en el bosque, conocido por ofrecer experiencias únicas de observación de vida silvestre desde plataformas elevadas">
+            <coordenadas>36.460897,0.546110</coordenadas>
+            <distanciaAnterior>140</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/pesca.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        <hito nombre="Arbol gigante Gatamaiyu" descripcion="Majestuoso árbol en el Bosque Aberdare, destacado por su grandiosidad y significado en la región">
+            <coordenadas>36.430723,0.543462</coordenadas>
+            <distanciaAnterior>85</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/arbol.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        <hito nombre="Cascada Karuru" descripcion="Hermosa cascada en medio del Bosque Aberdare, ofreciendo un paisaje sereno y una experiencia refrescante">
+            <coordenadas>36.396042;0.560789</coordenadas>
+            <distanciaAnterior>110</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/karuru.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+    </hitos>
+    <recomendacion>6</recomendacion>
+</ruta>
+<ruta nombre="Ruta en Bicicleta por el Lago Naivasha" lugarInicio="lugarInicio" direccionInicio="direccion" descripcion="Un recorrido escénico en bicicleta alrededor del hermoso lago Naivasha." agencia="agencia" duracion="P1Y7M29DT12H">
+    <tipoRuta>Silvestre</tipoRuta>
+    <medioTransporte>Coche</medioTransporte>
+    <fechaInicio>2018-10-20</fechaInicio>
+    <horaInicio>12:30:00</horaInicio>
+    <personasAdecuadas>No niños</personasAdecuadas>
+    <coordenadasInicio>36.429100;-0.760347</coordenadasInicio>
+    <referencias>
+        <referencia>https://es.wikipedia.org/wiki/Lago_Naivasha</referencia>
+        <referencia>https://www.safarisentanzania.com/que-ver-y-hacer-en-kenia-en-12-dias/safari-lago-naivasha/</referencia>
+        <referencia>https://www.conmochila.com/lago-naivasha</referencia>
+    </referencias>
+    <hitos>
+        <hito nombre="Crescent Island" descripcion="Isla escénica en el Lago Naivasha, hogar de una variedad de vida silvestre y destino popular para paseos en bicicleta">
+            <coordenadas>36.376713;-0.710248</coordenadas>
+            <distanciaAnterior>45</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/isla.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        <hito nombre="Piedras Fischer's Tower" descripcion="Formación rocosa distintiva en el parque, atractiva para escaladores y amantes de la geología">
+            <coordenadas>36.353431;-0.741916</coordenadas>
+            <distanciaAnterior>95</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/torre.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+        <hito nombre="Hell's Gate National Park" descripcion="Parque nacional en la orilla del lago, conocido por sus imponentes formaciones rocosas y actividades recreativas, como ciclismo y senderismo">
+            <coordenadas>36.359298;-0.901683</coordenadas>
+            <distanciaAnterior>80</distanciaAnterior>
+            <fotoHitos>
+                <fotoHito>./multimedia/fotosRutas/parque.jpg</fotoHito>
+            </fotoHitos>
+            <videosHito>
+            </videosHito>
+        </hito>
+    </hitos>
+    <recomendacion>6</recomendacion>
+</ruta>
 </rutas>

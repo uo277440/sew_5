@@ -47,6 +47,7 @@ def generar_svg(ruta, num_ruta):
     with open(f'perfil{num_ruta}.svg', 'w') as svg_file:
         svg_file.write(svg_contenido)
 
+
 def main():
     tree = ET.parse('xml/rutasEsquema.xml')
     root = tree.getroot()
