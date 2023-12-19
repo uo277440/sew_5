@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../estilo/layout.css">
     <link rel="stylesheet" type="text/css" href="../estilo/juegos.css">
 	<link rel="stylesheet" type="text/css" href="../estilo/crucigrama.css">
+    <link rel="icon" href="multimedia/favicon.ico">
 	<script src="../js/crucigrama.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Datos que describen el documento -->
@@ -23,14 +24,14 @@
 		<h1>Crucigrama</h1>
 		<nav>
 			
-			 <a tabindex="1" accesskey="I" href="./index.html">Inicio</a>
-			 <a tabindex="2" accesskey="S" href="vsobremi.html">Sobre mi</a>
-			 <a tabindex="3" accesskey="A" href="./agenda.html">Agenda</a>
-			 <a tabindex="4" accesskey="J" href="./juegos.html">Juegos</a>
-			 <a tabindex="5" accesskey="V" href="./viajes.php">Viajes</a>
-			 <a tabindex="6" accesskey="M" href="./metereologia.html">Metereología</a>
-			 <a tabindex="7" accesskey="N" href="./noticias.html">Noticias</a>
-			 <a tabindex="8" accesskey="R" href="./restaurante.php">Restaurante</a>
+			 <a tabindex="1" accesskey="I" href="../index.html">Inicio</a>
+			 <a tabindex="2" accesskey="S" href="../sobremi.html">Sobre mi</a>
+			 <a tabindex="3" accesskey="A" href="../agenda.html">Agenda</a>
+			 <a tabindex="4" accesskey="J" href="../juegos.html">Juegos</a>
+			 <a tabindex="5" accesskey="V" href="viajes.php">Viajes</a>
+			 <a tabindex="6" accesskey="M" href="../metereologia.html">Metereología</a>
+			 <a tabindex="7" accesskey="N" href="../noticias.html">Noticias</a>
+			 <a tabindex="8" accesskey="R" href="restaurante.php">Restaurante</a>
 			
 		</nav>
 		</header>
@@ -38,9 +39,9 @@
 			<h2>Juegos disponibles</h2>
 				<nav>
 					<menu>
-                    <li><a href="./sudoku.html">Sudoku</a></li>
-                    <li><a href="./memoria.html">Memoria</a></li>
-                    <li><a href="./api.html">ApiGame</a></li>
+                    <li><a href="../sudoku.html">Sudoku</a></li>
+                    <li><a href="../memoria.html">Memoria</a></li>
+                    <li><a href="../api.html">ApiGame</a></li>
 					</menu>
 				</nav>
 			</section>
@@ -67,6 +68,22 @@
 		</section>
         		
     </main>
+	<script>
+	var crucigrama = new Crucigrama()
+    document.addEventListener('keydown', function(event) {
+		var someClicked = $('p[data-state = "clicked"]')
+		numero = parseInt(event.key)
+		if(someClicked.length===0){
+			console.log("CELDA NO SELECCIONADA")
+		}else{
+			
+                crucigrama.introduceElement(event.key);
+		
+		}
+		
+        
+    });
+</script>
 
 
 

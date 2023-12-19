@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+    <meta name="author" content="Lucas Martínez Rego">
+    <meta name="description" content="Información sobre el circuito actual de f1">
+    <meta name="keywords" content="agenda,fórmula 1,circuito">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
+    <link rel="icon" href="multimedia/favicon.ico">
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/agenda.js"></script>
+    
+    <title>Escritorio Virtual</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Agenda</h1>
+        <nav>
+        
+            <a tabindex="1" accesskey="I" href="index.html">Inicio</a>
+            <a tabindex="2" accesskey="S" href="sobremi.html">Sobre mi</a>
+            <a tabindex="3" accesskey="A" href="agenda.html">Agenda</a>
+            <a tabindex="4" accesskey="J" href="juegos.html">Juegos</a>
+            <a tabindex="5" accesskey="V" href="php/viajes.php">Viajes</a>
+            <a tabindex="6" accesskey="M" href="metereologia.html">Metereología</a>
+            <a tabindex="7" accesskey="N" href="noticias.html">Noticias</a>
+            <a tabindex="8" accesskey="R" href="php/restaurante.php">Restaurante</a>
+           
+       </nav>
+        </header>
+        <script>
+            var agenda = new Agenda('http://ergast.com/api/f1/current')
+            
+            
+        </script>
+    <main>
+        <section>
+            <h2>Consultar</h2>
+            
+        <table>
+          <caption>Datos del circuito actual</caption>
+            <tbody><tr>
+              <th scope="col" id="nombre">Nombre de la Carrera</th>
+              <th scope="col" id="circuito">Circuito</th>
+              <th scope="col" id="coordenadas">Coordenadas</th>
+              <th scope="col" id="fecha">Fecha</th>
+              <th scope="col" id="hora">Hora</th>
+            </tr>
+        
+            <tr>
+                <td headers="nombre">Bahrain International Circuit</td>
+                <td headers="circuito">Bahrain Grand Prix</td>
+                <td headers="coordenadas">26.0325 N 50.5106 E</td>
+                <td headers="fecha">2023-03-05</td>
+                <td headers="hora">15:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Jeddah Corniche Circuit</td>
+                <td headers="circuito">Saudi Arabian Grand Prix</td>
+                <td headers="coordenadas">21.6319 N 39.1044 E</td>
+                <td headers="fecha">2023-03-19</td>
+                <td headers="hora">17:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Albert Park Grand Prix Circuit</td>
+                <td headers="circuito">Australian Grand Prix</td>
+                <td headers="coordenadas">-37.8497 N 144.968 E</td>
+                <td headers="fecha">2023-04-02</td>
+                <td headers="hora">05:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Baku City Circuit</td>
+                <td headers="circuito">Azerbaijan Grand Prix</td>
+                <td headers="coordenadas">40.3725 N 49.8533 E</td>
+                <td headers="fecha">2023-04-30</td>
+                <td headers="hora">11:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Miami International Autodrome</td>
+                <td headers="circuito">Miami Grand Prix</td>
+                <td headers="coordenadas">25.9581 N -80.2389 E</td>
+                <td headers="fecha">2023-05-07</td>
+                <td headers="hora">19:30:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Circuit de Monaco</td>
+                <td headers="circuito">Monaco Grand Prix</td>
+                <td headers="coordenadas">43.7347 N 7.42056 E</td>
+                <td headers="fecha">2023-05-28</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Circuit de Barcelona-Catalunya</td>
+                <td headers="circuito">Spanish Grand Prix</td>
+                <td headers="coordenadas">41.57 N 2.26111 E</td>
+                <td headers="fecha">2023-06-04</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Circuit Gilles Villeneuve</td>
+                <td headers="circuito">Canadian Grand Prix</td>
+                <td headers="coordenadas">45.5 N -73.5228 E</td>
+                <td headers="fecha">2023-06-18</td>
+                <td headers="hora">18:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Red Bull Ring</td>
+                <td headers="circuito">Austrian Grand Prix</td>
+                <td headers="coordenadas">47.2197 N 14.7647 E</td>
+                <td headers="fecha">2023-07-02</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Silverstone Circuit</td>
+                <td headers="circuito">British Grand Prix</td>
+                <td headers="coordenadas">52.0786 N -1.01694 E</td>
+                <td headers="fecha">2023-07-09</td>
+                <td headers="hora">14:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Hungaroring</td>
+                <td headers="circuito">Hungarian Grand Prix</td>
+                <td headers="coordenadas">47.5789 N 19.2486 E</td>
+                <td headers="fecha">2023-07-23</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Circuit de Spa-Francorchamps</td>
+                <td headers="circuito">Belgian Grand Prix</td>
+                <td headers="coordenadas">50.4372 N 5.97139 E</td>
+                <td headers="fecha">2023-07-30</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Circuit Park Zandvoort</td>
+                <td headers="circuito">Dutch Grand Prix</td>
+                <td headers="coordenadas">52.3888 N 4.54092 E</td>
+                <td headers="fecha">2023-08-27</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Autodromo Nazionale di Monza</td>
+                <td headers="circuito">Italian Grand Prix</td>
+                <td headers="coordenadas">45.6156 N 9.28111 E</td>
+                <td headers="fecha">2023-09-03</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Marina Bay Street Circuit</td>
+                <td headers="circuito">Singapore Grand Prix</td>
+                <td headers="coordenadas">1.2914 N 103.864 E</td>
+                <td headers="fecha">2023-09-17</td>
+                <td headers="hora">12:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Suzuka Circuit</td>
+                <td headers="circuito">Japanese Grand Prix</td>
+                <td headers="coordenadas">34.8431 N 136.541 E</td>
+                <td headers="fecha">2023-09-24</td>
+                <td headers="hora">05:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Losail International Circuit</td>
+                <td headers="circuito">Qatar Grand Prix</td>
+                <td headers="coordenadas">25.49 N 51.4542 E</td>
+                <td headers="fecha">2023-10-08</td>
+                <td headers="hora">17:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Circuit of the Americas</td>
+                <td headers="circuito">United States Grand Prix</td>
+                <td headers="coordenadas">30.1328 N -97.6411 E</td>
+                <td headers="fecha">2023-10-22</td>
+                <td headers="hora">19:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Autódromo Hermanos Rodríguez</td>
+                <td headers="circuito">Mexico City Grand Prix</td>
+                <td headers="coordenadas">19.4042 N -99.0907 E</td>
+                <td headers="fecha">2023-10-29</td>
+                <td headers="hora">20:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Autódromo José Carlos Pace</td>
+                <td headers="circuito">São Paulo Grand Prix</td>
+                <td headers="coordenadas">-23.7036 N -46.6997 E</td>
+                <td headers="fecha">2023-11-05</td>
+                <td headers="hora">17:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Las Vegas Strip Street Circuit</td>
+                <td headers="circuito">Las Vegas Grand Prix</td>
+                <td headers="coordenadas">36.1147 N -115.173 E</td>
+                <td headers="fecha">2023-11-19</td>
+                <td headers="hora">06:00:00</td>
+            </tr>
+            
+            <tr>
+                <td headers="nombre">Yas Marina Circuit</td>
+                <td headers="circuito">Abu Dhabi Grand Prix</td>
+                <td headers="coordenadas">24.4672 N 54.6031 E</td>
+                <td headers="fecha">2023-11-26</td>
+                <td headers="hora">13:00:00</td>
+            </tr>
+            </tbody></table></section>
+    </main>
+
+
+
+</body></html>
