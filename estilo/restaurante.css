@@ -26,8 +26,15 @@ input {
 input[type=radio] {
     width: 40%;
 }
-/*Especificidad: 001*/
-main > h2,h3 {
+/*Especificidad: 002*/
+main > h2,main > h3 {
+    /* Hereda background-color de body #DED9CD */
+    color: #000;
+    margin-bottom: 0.625em;
+    text-align: center;
+}
+/*Especificidad: 003*/
+main section h2,main section h3 {
     /* Hereda background-color de body #DED9CD */
     color: #000;
     margin-bottom: 0.625em;
