@@ -124,7 +124,6 @@ function llamadaApi(){
 			 <a tabindex="5" accesskey="V" href="viajes.php">Viajes</a>
 			 <a tabindex="6" accesskey="M" href="../metereologia.html">Metereología</a>
 			 <a tabindex="7" accesskey="N" href="../noticias.html">Noticias</a>
-			 <a tabindex="8" accesskey="R" href="restaurante.php">Restaurante</a>
 			
 		</nav>
 		</header>

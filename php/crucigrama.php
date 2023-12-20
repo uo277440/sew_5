@@ -99,7 +99,7 @@ if (!isset($_SESSION["db"])) {
     <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
     <link rel="stylesheet" type="text/css" href="../estilo/juegos.css" />
 	<link rel="stylesheet" type="text/css" href="../estilo/crucigrama.css" />
-    <link rel="icon" href="multimedia/favicon.ico"/>
+    <link rel="icon" href="../multimedia/favicon.ico"/>
 	<script src="../js/crucigrama.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Datos que describen el documento -->
@@ -120,7 +120,6 @@ if (!isset($_SESSION["db"])) {
 			 <a tabindex="5" accesskey="V" href="viajes.php">Viajes</a>
 			 <a tabindex="6" accesskey="M" href="../metereologia.html">Metereología</a>
 			 <a tabindex="7" accesskey="N" href="../noticias.html">Noticias</a>
-			 <a tabindex="8" accesskey="R" href="restaurante.php">Restaurante</a>
 			
 		</nav>
 		</header>
@@ -131,6 +130,7 @@ if (!isset($_SESSION["db"])) {
                     <li><a href="../sudoku.html">Sudoku</a></li>
                     <li><a href="../memoria.html">Memoria</a></li>
                     <li><a href="../api.html">ApiGame</a></li>
+                    <li><a href="./restaurante.php">Restaurante</a></li>
 					</menu>
 				</nav>
 			</section>

@@ -23,7 +23,6 @@ class Restaurante {
 
         foreach ($tablas as $tabla) {
             $contenidoCSV = $this->obtenerContenidoCSV($tabla);
-
             $contenidoTotalCSV .= $contenidoCSV;
         }
 
@@ -40,16 +39,16 @@ class Restaurante {
         $query = "SELECT * FROM $tabla";
         $result = $this->db->query($query);
 
-        $contenidoCSV = '';
-        $encabezados = array();
+        $csv = '';
+        $heads = array();
         while ($columna = $result->fetch_field()) {
-            $encabezados[] = $columna->name;
+            $heads[] = $columna->name;
         }
-        $contenidoCSV .= implode(',', $encabezados) . "\n";
+        $csv .= implode(',', $heads) . "\n";
         while ($fila = $result->fetch_assoc()) {
-            $contenidoCSV .= implode(',', $fila) . "\n";
+            $csv .= implode(',', $fila) . "\n";
         }
-        return $contenidoCSV;
+        return $csv;
     }
     
     
@@ -398,7 +397,8 @@ if (count($_POST) > 0) {
 	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
 	<link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
 	<link rel="stylesheet" type="text/css" href="../estilo/restaurante.css" />
-    <link rel="icon" href="multimedia/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../estilo/juegos.css" />
+    <link rel="icon" href="../multimedia/favicon.ico"/>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
@@ -420,10 +420,20 @@ if (count($_POST) > 0) {
 			 <a tabindex="5" accesskey="V" href="viajes.php">Viajes</a>
 			 <a tabindex="6" accesskey="M" href="../metereologia.html">Metereología</a>
 			 <a tabindex="7" accesskey="N" href="../noticias.html">Noticias</a>
-			 <a tabindex="8" accesskey="R" href="restaurante.php">Restaurante</a>
 			
 		</nav>
 		</header>
+        <section>
+			<h2>Juegos disponibles</h2>
+				<nav>
+					<menu>
+                    <li><a href="../sudoku.html">Sudoku</a></li>
+                    <li><a href="../memoria.html">Memoria</a></li>
+                    <li><a href="./crucigrama.php">Crucigrama</a></li>
+                    <li><a href="../api.html">ApiGame</a></li>
+					</menu>
+				</nav>
+			</section>
     <main>
     <form action="#" method="post">
         <input type="submit" value="Mostrar Carta" name="mostrarCarta"/>

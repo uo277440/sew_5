@@ -3,7 +3,8 @@ main > section:nth-of-type(1){
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 3em;
   }
   /*Especificidad: 001*/
   h2 {
@@ -16,16 +17,19 @@ main > section:nth-of-type(1){
 
   /*Especificidad: 001*/
   figure {
-    width: calc(27%); 
+    width: calc(30% - 4em); 
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 0.2em solid #000; 
+    padding-right: 1em;
+    padding-bottom: 6em;
     transform: scale(1);
     transform-style: preserve-3d;
     /*Redefinición de transition*/
     transition: transform .5s;
     cursor: move;
+    height: 15em;
     margin: 2em;
   }
   /*Especificidad: 002*/
@@ -33,7 +37,7 @@ main > section:nth-of-type(1){
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
 /*Especificidad: 011*/
