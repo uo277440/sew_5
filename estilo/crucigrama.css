@@ -29,12 +29,13 @@ p[data-state = "blocked"] {
 p[data-state = "clicked"]{
     /*Hereda color de estilo.css p #000*/
     background-color: #7CFCF9;
+    font-size: 1.5em;
 }
 /*Especificidad: 011*/
-p[data-state = "correct"]{
+p[data-state = "default"],p[data-state = "correct"]{
     /*Hereda color de estilo.css p #000*/
-    background-color: #FFF;
     font-size: 1.5em;
+    background-color: #DEFFCD;
 }
 
 @media screen and (min-width: 600px){

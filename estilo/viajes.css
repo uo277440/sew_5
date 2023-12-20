@@ -45,7 +45,7 @@ article h3 {
 }
 
 
-/*Especificidad: 013*/
+/*Especificidad: 012*/
 main > article:nth-of-type(1){
     width: 100%;
     max-width: 100vh;
