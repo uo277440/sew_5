@@ -27,7 +27,7 @@ input[type=radio] {
     width: 40%;
 }
 /*Especificidad: 001*/
-h2,h3 {
+main > h2,h3 {
     /* Hereda background-color de body #DED9CD */
     color: #000;
     margin-bottom: 0.625em;
