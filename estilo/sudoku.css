@@ -28,6 +28,11 @@ main {
   p:nth-child(3n){
     border-right: 0.2em solid black;
   }
+/*Especificidad: 002*/
+  section h2 {
+    width: 100%;
+    text-align: center;
+  }
   
 /*Especificidad: 011*/
 p:nth-child(9n + 1) {

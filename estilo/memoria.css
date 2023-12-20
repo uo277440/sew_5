@@ -6,6 +6,7 @@ main > section:nth-of-type(1) {
     justify-content: space-around;
     height: 25em;
   }
+ 
   
   /*Especificidad: 001*/
   h2 {
@@ -22,7 +23,6 @@ main > section:nth-of-type(1) {
     flex-direction: column;
     align-items: center;
     border: 0.2em solid #000; 
-    padding-right: 1em;
     padding-bottom: 6em;
     transform: scale(1);
     cursor: pointer;
@@ -30,6 +30,24 @@ main > section:nth-of-type(1) {
     transition: transform .5s;
     
   }
+  @media (max-width: 650px) {
+    /*Especificidad: 002*/
+  section > article {
+    width: calc(40%); /* Calcula el ancho de cada artículo (20% del ancho total con márgenes) */
+    height: 10em;
+    margin:1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2em solid #000; 
+    padding-bottom: 6em;
+    transform: scale(1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    
+  }
+}
   /*Especificidad: 011*/
   article[data-state=flip] {
     transform: rotateY(180deg);
@@ -37,6 +55,10 @@ main > section:nth-of-type(1) {
 /*Especificidad: 011*/
 article[data-state=revealed] {
   transform: rotateY(180deg);
+}
+/*Especificidad: 011*/
+h2:nth-of-type(1){
+text-align: center;
 }
 /*Especificidad: 002*/
 article h3,
@@ -66,4 +88,5 @@ article img {
     height: 15em;
     
   }
+
   

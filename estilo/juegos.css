@@ -27,3 +27,7 @@ body > section:nth-of-type(1) {
     padding: 1.25em;
 
 }
+/*Especificidad: 011*/
+h2:nth-of-type(1){
+    text-align: center;
+    }
