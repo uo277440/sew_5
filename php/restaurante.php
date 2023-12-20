@@ -249,48 +249,72 @@ private function obtenerIdCliente($nombre, $telefono,$correo)
     }
 
     public function cargarClientesDesdeCSV() {
-        
         $this->conectarBaseDatos();
         $this->db->select_db("restaurante");
-
+    
         $nombre = null;
         if (isset($_FILES["csv"])) {
             $nombre = $_FILES["csv"]["tmp_name"];
         }
-
+    
         $fichero = fopen($nombre, "r");
         while (($datos = fgetcsv($fichero)) !== false) {
-            $insercion = "INSERT INTO clientes (id_cliente, nombre, telefono, email) VALUES (?, ?, ?, ?)";
-            $pst = $this->db->prepare($insercion);
-            $pst->bind_param("isss", $datos[0], $datos[1], $datos[2],$datos[3]);
-            $resultado = $pst->execute();
-
-            if ($resultado) {
-                $this->msgAviso = "Se han cargado los clientes con éxito";
-            } else {
-                $this->msgAviso = "ERROR: No se ha podido cargar el fichero CSV de clientes.";
-            }
+            $clienteExistente = $this->buscarClientePorId($datos[0]);
+    
+            if ($clienteExistente) {
+                $this->msgAviso = "Cliente con ID {$datos[0]} ya existe en la base de datos. No se ha insertado.";
+                continue;
+            } 
+                $insercion = "INSERT INTO clientes (id_cliente, nombre, telefono, email) VALUES (?, ?, ?, ?)";
+                $pst = $this->db->prepare($insercion);
+                $pst->bind_param("isss", $datos[0], $datos[1], $datos[2], $datos[3]);
+                $resultado = $pst->execute();
+    
+                if ($resultado) {
+                    $this->msgAviso = "Se han cargado los clientes con éxito";
+                } else {
+                    $this->msgAviso = "ERROR: No se ha podido cargar el fichero CSV de clientes.";
+                }
+            
         }
         fclose($fichero);
+    }
+    
+
+    private function buscarClientePorId($idCliente) {
+        $consulta = "SELECT id_cliente FROM clientes WHERE id_cliente = ?";
+        $pst = $this->db->prepare($consulta);
+        $pst->bind_param("i", $idCliente);
+        $pst->execute();
+        $resultado = $pst->get_result();
+    
+        return $resultado->num_rows > 0;
     }
    
 
     public function cargarMesasDesdeCSV() {
         $this->conectarBaseDatos();
         $this->db->select_db("restaurante");
-
+    
         $nombre = null;
         if (isset($_FILES["csv"])) {
             $nombre = $_FILES["csv"]["tmp_name"];
         }
-
+    
         $fichero = fopen($nombre, "r");
         while (($datos = fgetcsv($fichero)) !== false) {
-            $insercion = "INSERT INTO mesas (id_mesa,capacidad, ubicacion) VALUES (?,?, ?)";
+            $mesaExistente = $this->buscarMesaPorId($datos[0]);
+    
+            if ($mesaExistente) {
+                $this->msgAviso = "Mesa con ID {$datos[0]} ya existe en la base de datos. No se ha insertado.";
+                continue;
+            }
+    
+            $insercion = "INSERT INTO mesas (id_mesa, capacidad, ubicacion) VALUES (?, ?, ?)";
             $pst = $this->db->prepare($insercion);
-            $pst->bind_param("iss", $datos[0], $datos[1],$datos[2]);
+            $pst->bind_param("iss", $datos[0], $datos[1], $datos[2]);
             $resultado = $pst->execute();
-
+    
             if ($resultado) {
                 $this->msgAviso = "Se han cargado las mesas con éxito";
             } else {
@@ -299,23 +323,54 @@ private function obtenerIdCliente($nombre, $telefono,$correo)
         }
         fclose($fichero);
     }
+    
+    private function buscarMesaPorId($idMesa) {
+        $consulta = "SELECT id_mesa FROM mesas WHERE id_mesa = ?";
+        $pst = $this->db->prepare($consulta);
+        $pst->bind_param("i", $idMesa);
+        $pst->execute();
+        $resultado = $pst->get_result();
+    
+        return $resultado->num_rows > 0;
+    }
 
     public function cargarReservasDesdeCSV() {
         $this->conectarBaseDatos();
         $this->db->select_db("restaurante");
-
+    
         $nombre = null;
         if (isset($_FILES["csv"])) {
             $nombre = $_FILES["csv"]["tmp_name"];
         }
-
+    
         $fichero = fopen($nombre, "r");
         while (($datos = fgetcsv($fichero)) !== false) {
-            $insercion = "INSERT INTO reservas (id_reserva,id_cliente, id_mesa, fecha, hora) VALUES (?, ?, ?, ?,?)";
+            $reservaExistente = $this->buscarReservaPorId($datos[0]);
+    
+            if ($reservaExistente) {
+                $this->msgAviso = "Reserva con ID {$datos[0]} ya existe en la base de datos. No se ha insertado la reserva.";
+                continue; 
+            }
+    
+          
+            $clienteExistente = $this->buscarClientePorId($datos[1]);
+            $mesaExistente = $this->buscarMesaPorId($datos[2]);
+    
+            if (!$clienteExistente) {
+                $this->msgAviso = "Cliente con ID {$datos[1]} no existe en la base de datos. No se ha insertado la reserva.";
+                continue; 
+            }
+    
+            if (!$mesaExistente) {
+                $this->msgAviso = "Mesa con ID {$datos[2]} no existe en la base de datos. No se ha insertado la reserva.";
+                continue; 
+            }
+    
+            $insercion = "INSERT INTO reservas (id_reserva, id_cliente, id_mesa, fecha, hora) VALUES (?, ?, ?, ?, ?)";
             $pst = $this->db->prepare($insercion);
-            $pst->bind_param("iiiss", $datos[0], $datos[1], $datos[2], $datos[3],$datos[4]);
+            $pst->bind_param("iiiss", $datos[0], $datos[1], $datos[2], $datos[3], $datos[4]);
             $resultado = $pst->execute();
-
+    
             if ($resultado) {
                 $this->msgAviso = "Se han cargado las reservas con éxito";
             } else {
@@ -324,23 +379,41 @@ private function obtenerIdCliente($nombre, $telefono,$correo)
         }
         fclose($fichero);
     }
+    
+    private function buscarReservaPorId($idReserva) {
+        $consulta = "SELECT id_reserva FROM reservas WHERE id_reserva = ?";
+        $pst = $this->db->prepare($consulta);
+        $pst->bind_param("i", $idReserva);
+        $pst->execute();
+        $resultado = $pst->get_result();
+    
+        return $resultado->num_rows > 0;
+    }
 
     public function cargarMenusDesdeCSV() {
         $this->conectarBaseDatos();
         $this->db->select_db("restaurante");
-
+    
         $nombre = null;
         if (isset($_FILES["csv"])) {
             $nombre = $_FILES["csv"]["tmp_name"];
         }
-
+    
         $fichero = fopen($nombre, "r");
         while (($datos = fgetcsv($fichero)) !== false) {
-            $insercion = "INSERT INTO menus (id_menu,nombre, descripcion, precio) VALUES (?, ?, ?,?)";
-            $pst = $this->db->prepare($insercion);
-            $pst->bind_param("issd", $datos[0], $datos[1], $datos[2],$datos[3]);
-            $resultado = $pst->execute();
+            $menuExistente = $this->buscarMenuPorId($datos[0]);
+    
+            if ($menuExistente) {
+                $this->msgAviso = "Menú con ID {$datos[0]} ya existe en la base de datos. No se ha insertado.";
+                continue; 
+            }
+    
 
+            $insercion = "INSERT INTO menus (id_menu, nombre, descripcion, precio) VALUES (?, ?, ?, ?)";
+            $pst = $this->db->prepare($insercion);
+            $pst->bind_param("issd", $datos[0], $datos[1], $datos[2], $datos[3]);
+            $resultado = $pst->execute();
+    
             if ($resultado) {
                 $this->msgAviso = "Se han cargado los menús con éxito";
             } else {
@@ -349,21 +422,40 @@ private function obtenerIdCliente($nombre, $telefono,$correo)
         }
         fclose($fichero);
     }
+    
+    private function buscarMenuPorId($idMenu) {
+        $consulta = "SELECT id_menu FROM menus WHERE id_menu = ?";
+        $pst = $this->db->prepare($consulta);
+        $pst->bind_param("i", $idMenu);
+        $pst->execute();
+        $resultado = $pst->get_result();
+    
+        return $resultado->num_rows > 0;
+    }
+    
     public function cargarEmpleadosDesdeCSV() {
         $this->conectarBaseDatos();
         $this->db->select_db("restaurante");
-
+    
         $nombre = null;
         if (isset($_FILES["csv"])) {
             $nombre = $_FILES["csv"]["tmp_name"];
         }
+    
         $fichero = fopen($nombre, "r");
         while (($datos = fgetcsv($fichero)) !== false) {
-            $insercion = "INSERT INTO empleados (id_empleado,nombre, cargo, salario) VALUES (?, ?, ?,?)";
+            $empleadoExistente = $this->buscarEmpleadoPorId($datos[0]);
+    
+            if ($empleadoExistente) {
+                $this->msgAviso = "Empleado con ID {$datos[0]} ya existe en la base de datos. No se ha insertado.";
+                continue; 
+            }
+    
+            $insercion = "INSERT INTO empleados (id_empleado, nombre, cargo, salario) VALUES (?, ?, ?, ?)";
             $pst = $this->db->prepare($insercion);
-            $pst->bind_param("issd", $datos[0], $datos[1], $datos[2],$datos[3]);
+            $pst->bind_param("issd", $datos[0], $datos[1], $datos[2], $datos[3]);
             $resultado = $pst->execute();
-
+    
             if ($resultado) {
                 $this->msgAviso = "Se han cargado los empleados con éxito";
             } else {
@@ -371,6 +463,16 @@ private function obtenerIdCliente($nombre, $telefono,$correo)
             }
         }
         fclose($fichero);
+    }
+    
+    private function buscarEmpleadoPorId($idEmpleado) {
+        $consulta = "SELECT id_empleado FROM empleados WHERE id_empleado = ?";
+        $pst = $this->db->prepare($consulta);
+        $pst->bind_param("i", $idEmpleado);
+        $pst->execute();
+        $resultado = $pst->get_result();
+    
+        return $resultado->num_rows > 0;
     }
     
 }

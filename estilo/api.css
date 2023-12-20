@@ -8,7 +8,6 @@ main > section:nth-of-type(1){
   /*Especificidad: 001*/
   h2 {
     width: 100%;
-    text-align: center;
     padding: 0.625em;
     
   }

@@ -7,7 +7,6 @@ main {
     margin:auto;
     width: 500px;
     height: 500px;
-    text-align: center
   }
   /*Especificidad: 011*/
   p[data-state='clicked']{
@@ -23,6 +22,9 @@ main {
   p {
     border: 0.0625em solid #5f5a5a;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   /*Especificidad: 011*/
   p:nth-child(3n){
@@ -31,7 +33,6 @@ main {
 /*Especificidad: 002*/
   section h2 {
     width: 100%;
-    text-align: center;
   }
   
 /*Especificidad: 011*/
