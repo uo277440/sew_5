@@ -81,7 +81,7 @@ class Memoria{
             
         }
     
-        console.log(this.lastChild.getAttribute("alt"));
+
         
       }
     constructor (){

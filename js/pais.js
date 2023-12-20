@@ -1,4 +1,3 @@
-// JavaScript source code
 class Pais {
     constructor (nombrePais,nombreCapital,poblacion){
         this.nombrePais=nombrePais;

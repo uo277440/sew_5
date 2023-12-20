@@ -1,10 +1,10 @@
 
 class Crucigrama{
     constructor(){
-        this.board="4,*,.,=,12,#,#,#,5,#,#,*,#,/,#,#,#,*,4,-"+
+        this.board2="4,*,.,=,12,#,#,#,5,#,#,*,#,/,#,#,#,*,4,-"+
         ",.,=,.,#,15,#,.,*,#,=,#,=,#,/,#,=,.,#,3,#,4,*,.,=,20,=,#,#,#,#,#,=,#,#,8,#,9,-,.,=,3,#,.,#,#,-"+
         ",#,+,#,#,#,*,6,/,.,=,.,#,#,#,.,#,#,=,#,=,#,#,#,=,#,#,6,#,8,*,.,=,16"
-        this.board2="4,.,.,=,36,#,#,#,25,#,#,*,#,.,#,#,#,.,.,-"+
+        this.board="4,.,.,=,36,#,#,#,25,#,#,*,#,.,#,#,#,.,.,-"+
         ",.,=,.,#,15,#,.,*,#,=,#,=,#,.,#,=,.,#,18,#,6,*,.,=,30,=,#,#,#,#,#,=,#,#,56,#,9,-"+
         ",.,=,3,#,.,#,#,*,#,+,#,#,#,*,20,.,.,=,18,#,#,#,.,#,#,=,#,=,#,#,#,=,#,#,18,#,24,.,.,=,72"
         this.filas=11
@@ -143,15 +143,7 @@ class Crucigrama{
     var second_number=this.boardArray[i][j_s-1]
     var expression=this.boardArray[i][j_s-2]
     var result=this.boardArray[i][j_s+1]
-    if(!(!(isNaN(parseInt(first_number))) || first_number==='0')){
-      console.log("a")
-    }if(!(!isNaN(parseInt(second_number)) || second_number==='0')){
-      console.log("b")
-    }if(!(!isNaN(parseInt(second_number)) || second_number==='0')){
-      console.log("c")
-    }if(!((['+', '-', '*', '/'].includes(expression) || expression===0))){
-      console.log("d")
-    }
+
     if(!(!isNaN(parseInt(first_number)) || first_number==='0') || !(!isNaN(parseInt(second_number)) || second_number==='0') || !(!isNaN(parseInt(result)) || result==='0') || !((['+', '-', '*', '/'].includes(expression) || expression==='0'))){
       return false;
     }
@@ -181,9 +173,7 @@ class Crucigrama{
     var second_number=this.boardArray[i_s-1][j]
     var expression=this.boardArray[i_s-2][j]
     var result=this.boardArray[i_s+1][j]
-    if(!(!(isNaN(parseInt(first_number))) || first_number==='0')){
-      console.log("a")
-    }
+
     if(!(!(isNaN(parseInt(first_number))) || first_number==='0') || !(!(isNaN(parseInt(second_number))) || second_number==='0') || !(!(isNaN(parseInt(result))) || result==='0') || !((['+', '-', '*', '/'].includes(expression) || expression==='0'))){
       return false;
     }

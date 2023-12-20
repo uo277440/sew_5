@@ -127,7 +127,7 @@ class Sudoku{
           }
         }
 
-        //columna y fila actual , de coluumna hago columna - columna %3 y fila igual y posicion de la superior izq del subconjunto
+       
         this.tablero[i][j]=numero;
         return true
       }

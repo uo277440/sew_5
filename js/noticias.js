@@ -2,7 +2,7 @@ class Noticias{
     constructor(){
         if (window.File && window.FileReader && window.FileList && window.Blob) 
         {  
-            //El navegador soporta el API File
+ 
             document.write("<p>Este navegador soporta el API File </p>");
         }
             else document.write("<p>¡¡¡ Este navegador NO soporta el API File y este programa puede no funcionar correctamente !!!</p>");
@@ -11,8 +11,6 @@ class Noticias{
         const contenedor = document.querySelector('main')
         
         const file = fileInput.files[0];
-        //var secciones =['Titular', 'Entradilla', 'Texto',
-            //'Autor']
         if (file) {
           const reader = new FileReader()
 
@@ -20,7 +18,6 @@ class Noticias{
             const contenido = e.target.result;
             const lineas = contenido.split('\n')
 
-            // Crear la estructura HTML
             lineas.forEach((linea, index) => {
               var elementos = linea.split("_")
               const h2 = document.createElement('h2')
