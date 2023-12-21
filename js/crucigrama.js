@@ -100,7 +100,7 @@ class Crucigrama{
 
     }
     introduceElement(numero){
-      if(!isNaN(numero) || ['+', '-', '*', '/'].includes(numero)){
+      if((!isNaN(numero) && numero != 0) || (['+', '-', '*', '/'].includes(numero))){
         var expression_row=true
         var expression_col=true
         var someclicked = $("p[data-state='clicked']")[0]
